@@ -184,7 +184,7 @@ An ID isn't necessary for `get_the_subtitle`, but will work for retrieving subti
 ## Changelog
 
 ### 1.0.0 (June 12th, 2014)
-- Initial Release ([Launch Announcement](https://philiparthurmoore.com/subtitles)) ([Download](#))
+- Initial Release ([Launch Announcement](https://philiparthurmoore.com/subtitles))
 
 ## Screenshots
 
