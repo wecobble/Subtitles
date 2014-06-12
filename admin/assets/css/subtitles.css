@@ -1,0 +1,56 @@
+/**
+ * Plugin Name: Subtitles
+ * Plugin URI: http://wordpress.org/plugins/subtitles/
+ * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
+ * Author: Philip Arthur Moore
+ * Author URI: https://philiparthurmoore.com/
+ * Version: 1.0.0
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+#subtitlediv {
+	position: relative;
+	margin-bottom: 10px;
+	margin-top: -5px;
+}
+
+#subtitlediv label {
+	cursor: text;
+}
+
+#subtitles-not-supported {
+	line-height: 24px;
+	min-height: 25px; /* Yes, line-height + 1 */
+	margin: 0;
+	padding: 0 10px 5px;
+	color: #666;
+}
+
+#subtitles-not-supported strong {
+	background-color: #fffbcc;
+	font-weight: 400;
+}
+
+#poststuff #subtitlewrap {
+	border: 0;
+	padding: 0;
+}
+
+#subtitlediv #subtitle {
+	padding: 3px 8px;
+	font-size: 18px;
+	line-height: 100%;
+	height: 38px;
+	width: 100%;
+	outline: none;
+	margin: 0;
+	background-color: #fff;
+}
+
+#subtitlediv #subtitle-prompt-text {
+	color: #777;
+	position: absolute;
+	font-size: 18px;
+	padding: 11px 10px;
+}

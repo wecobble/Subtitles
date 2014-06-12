@@ -1,0 +1,24 @@
+/**
+ * Plugin Name: Subtitles
+ * Plugin URI: http://wordpress.org/plugins/subtitles/
+ * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
+ * Author: Philip Arthur Moore
+ * Author URI: https://philiparthurmoore.com/
+ * Version: 1.0.0
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+/**
+ * Be explicit about this styling only applying to spans,
+ * since that's the default markup that's returned by
+ * Subtitles. If a developer overrides the default subtitles
+ * markup with another element or class, we don't want to stomp
+ * on that.
+ *
+ * @since 1.0.0
+ */
+span.entry-subtitle {
+	display: block; /* Put subtitles on their own line by default. */
+	font-size: 0.53333333333333em; /* Sensible scaling. It's assumed that post titles will be wrapped in heading tags. */
+}
