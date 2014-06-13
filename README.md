@@ -191,3 +191,8 @@ Two primary screenshots have been shown in this README.md file, one of the post 
 ## Translators
 
 Please submit a pull request if your language isn’t listed or you would like to help me translate the plugin into your language.
+
+_Subtitles_ is available in the following languages:
+
+- English
+- Italian ([Roberto Pizzo](http://robertopizzo.it))
