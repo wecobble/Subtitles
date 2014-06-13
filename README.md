@@ -125,6 +125,8 @@ function ditch_subtitle_styling() {
 add_action( 'wp_enqueue_scripts', 'ditch_subtitle_styling' );
 ```
 
+After doing this, nothing should be loaded on the front end of your site and you'll need to style subtitles using your own CSS.
+
 ---
 
 ### Adding _Subtitles_ Support into Custom Post Types ###
