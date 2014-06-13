@@ -1,6 +1,8 @@
 # Translating _Subtitles_
 
-_Subtitles_ is currently available in the following languages:
+This plugin currently only uses one translatable string: **Enter subtitle here**. I'll need your help translating that phrase into your language.
+
+Right now, _Subtitles_ is available in the following languages:
 
 - English
 - Italian (Roberto Pizzo)
