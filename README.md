@@ -72,6 +72,28 @@ When you uninstall _Subtitles_, nothing will happen to your subtitles post meta.
 
 ---
 
+### SEO ###
+
+Will _Subtitles_ ruin your SEO? That's a fair question. The answer is no. I've made a note of exactly why `<spans>` are the default wrappers for subtitles in the inline developer docs for the plugin, which I'll reiterate here:
+
+```php
+ * 4. Visually, I have made a major assumption that subtitles belong immediately after titles. The very
+ *    definition of a subtitle is that it is a subordinate title of a published work that often gives
+ *    explanatory details about the immediately preceeding title. It's for this reason that I've chosen
+ *    to filter the output of the_title() with the expectation that post titles will be wrapped in
+ *    primary heading (h1) tags. So post titles will be H1, while their subtitles will be spans.
+ *    Multiple H1 tags in the HTML5 age are okay.
+ * 5. The reason that <spans> are being used is because HTML does not have a dedicated mechanism for
+ *    marking up subheadings, alternative titles, or taglines. There are suggested alternatives from
+ *    the World Wide Web Consortium (W3C); among them are spans, which work well for what we're trying
+ *    to do with titles in WordPress. See the linked documentation for more information.
+ *    @link http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#sub-head
+```
+
+If you're worried about SEO and the markup of _Subtitles_, then [roll your own markup](https://github.com/philiparthurmoore/Subtitles#modifying-subtitles-markup).
+
+---
+
 ### Adding _Subtitles_ Support into Custom Post Types ###
 
 If you'd like to add _Subtitles_ support into a custom post type, use `add_post_type_support` in a function hooked to `init`, for example:
