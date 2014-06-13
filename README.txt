@@ -55,6 +55,7 @@ There are two types of questions that are anticipated: user questions and develo
 == Screenshots ==
 
 1. The input prompt for subtitles.
+2. The front end view of a blog post with a subtitle.
 
 == Changelog ==
 
