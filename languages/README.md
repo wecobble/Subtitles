@@ -5,6 +5,7 @@ This plugin currently only uses one translatable string: **Enter subtitle here**
 Right now, _Subtitles_ is available in the following languages:
 
 - English
+- Finnish ([Sami Keijonen](http://profiles.wordpress.org/samikeijonen))
 - Italian (Roberto Pizzo)
 - Vietnamese
 
