@@ -195,4 +195,4 @@ Please submit a pull request if your language isn’t listed or you would like t
 _Subtitles_ is available in the following languages:
 
 - English
-- Italian ([Roberto Pizzo](http://robertopizzo.it))
+- Italian (Roberto Pizzo)
