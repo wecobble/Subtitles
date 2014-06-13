@@ -6,6 +6,7 @@ Right now, _Subtitles_ is available in the following languages:
 
 - English
 - Italian (Roberto Pizzo)
+- Vietnamese
 
 All available translations for the plugin are located in this folder.
 
