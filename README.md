@@ -74,7 +74,7 @@ When you uninstall _Subtitles_, nothing will happen to your subtitles post meta.
 
 ### SEO ###
 
-Will _Subtitles_ ruin your SEO? That's a fair question. The answer is no. I've made a note of exactly why `<spans>` are the default wrappers for subtitles in the inline developer docs for the plugin, which I'll reiterate here:
+Will _Subtitles_ ruin your SEO? That's a fair question. The answer is no. I've made a note of exactly why `<spans>` are the default wrappers for subtitles in the [inline developer docs](https://github.com/philiparthurmoore/Subtitles/blob/master/subtitles.php) for the plugin, which I'll reiterate here:
 
 ```php
  * 4. Visually, I have made a major assumption that subtitles belong immediately after titles. The very
