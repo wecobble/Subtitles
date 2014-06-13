@@ -94,6 +94,39 @@ If you're worried about SEO and the markup of _Subtitles_, then [roll your own m
 
 ---
 
+### Performance ###
+
+_Subtitles_ makes one additional server request on the front-end of your website. This is to load sensible CSS that will ensure your subtitle is always scaled properly alongisde your website title.
+
+```css
+/**
+ * Be explicit about this styling only applying to spans,
+ * since that's the default markup that's returned by
+ * Subtitles. If a developer overrides the default subtitles
+ * markup with another element or class, we don't want to stomp
+ * on that.
+ *
+ * @since 1.0.0
+ */
+span.entry-subtitle {
+	display: block; /* Put subtitles on their own line by default. */
+	font-size: 0.53333333333333em; /* Sensible scaling. It's assumed that post titles will be wrapped in heading tags. */
+}
+```
+
+I can certainly see a case for potentially inlining these styles, but I need to first make sure that it makes sense to do so at the expense of documentation and extensibility for potential future enhancements to the plugin.
+
+For now, if you'd like to remove this additional CSS call, then simply add a similar function to the following in your plugin or theme's primary file:
+
+```php
+function ditch_subtitle_styling() {
+	wp_dequeue_style( 'subtitles-style' );
+}
+add_action( 'wp_enqueue_scripts', 'ditch_subtitle_styling' );
+```
+
+---
+
 ### Adding _Subtitles_ Support into Custom Post Types ###
 
 If you'd like to add _Subtitles_ support into a custom post type, use `add_post_type_support` in a function hooked to `init`, for example:
