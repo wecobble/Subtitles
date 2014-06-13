@@ -28,8 +28,6 @@ There are no custom template tags to add into your theme and, outside of advance
 
 What follows are instructions on how to install the plugin and get it working.
 
-:mega: The following instructions are pending, as _Subtitles_ has been uploaded to the WordPress plugin repository for review but is awaiting approval. Until the plugin is added directly into the WordPress.org repository, simply download the plugin here at GitHub, on the _Subtitles_ [releases page](https://github.com/philiparthurmoore/Subtitles/releases).
-
 ### Using The WordPress Dashboard (Recommended) ###
 
 1. Navigate to *Plugins → Add New* from within the WordPress Dashboard.
