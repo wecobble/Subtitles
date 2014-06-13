@@ -188,9 +188,13 @@ An ID isn't necessary for `get_the_subtitle`, but will work for retrieving subti
 
 Two primary screenshots have been shown in this README.md file, one of the post screen and one of an example of what subtitles will look like on the front end of your website. The [assets folder](https://github.com/philiparthurmoore/Subtitles/tree/master/assets) in this GitHub repository will be used to populate screenshots on the WordPress.org plugin site, and will not be included in the official plugin download from WordPress.org.
 
-## Translators
+## Translations
 
-Please submit a pull request if your language isn’t listed or you would like to help me translate the plugin into your language.
+Please submit a pull request if your language isn’t listed or you would like to help me translate the plugin into your language. You can also email me translation packs for _Subtitles_. I will need both .mo and .po files.
+
+Please see [WordPress in Your Language](https://codex.wordpress.org/WordPress_in_Your_Language) for more information about using Subtitles in your language. All language packs for the plugin will be shipped with the official download, so you shouldn't need to do much to use _Subtitles_ in your language.
+
+For more information about translations and WordPress, see the [Translation Basics](http://make.wordpress.org/polyglots/handbook/translating/basics/) page in the Codex.
 
 _Subtitles_ is available in the following languages:
 
