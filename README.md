@@ -94,7 +94,7 @@ If you're worried about SEO and the markup of _Subtitles_, then [roll your own m
 
 ---
 
-### Performance ###
+### Front-End Performance ###
 
 _Subtitles_ makes one additional server request on the front-end of your website. This is to load sensible CSS that will ensure your subtitle is always scaled properly alongisde your website title.
 
