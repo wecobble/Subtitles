@@ -258,7 +258,7 @@ Two primary screenshots have been shown in this README.md file, one of the post 
 
 ## Translations
 
-See the [languages](https://github.com/philiparthurmoore/Subtitles/tree/master/languages) folder for more information on using _Subtitles_ in your language.
+See the [languages](https://github.com/philiparthurmoore/Subtitles/tree/master/languages) folder for more information on using _Subtitles_ in your language. These are considered "Extras" and will usually be released when a version bump has happened to _Subtitles_, for example during a bug fix or enhancement round of updates.
 
 ## Versioning
 
