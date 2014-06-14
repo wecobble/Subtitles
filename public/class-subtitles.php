@@ -514,7 +514,6 @@ class Subtitles {
 		 * @since 1.0.0
 		 */
 		global $post;
-		global $id;
 
 		/**
 		 * Make sure we're not touching any of the titles in the Dashboard
@@ -547,17 +546,6 @@ class Subtitles {
 		 * @since 1.0.0
 		 */
 		if ( isset( $post->post_title ) && $title != $post->post_title ) {
-			return $title;
-		}
-
-		/**
-		 * Don't filter titles that are in navigation menus. This can happen when
-		 * you're in a single post or page view and the post/page being viewed
-		 * is also part of the navigation menu.
-		 *
-		 * @since 1.0.0
-		 */
-		if ( ! $id ) {
 			return $title;
 		}
 
