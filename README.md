@@ -238,6 +238,15 @@ An ID isn't necessary for `get_the_subtitle`, but will work for retrieving subti
 
 ## Changelog
 
+### 1.0.1 (Date TBD)
+
+- Resolve title output issues when [WordPress SEO by Yoast](https://wordpress.org/plugins/wordpress-seo/) breadcrubs are used inside of [The Loop](http://codex.wordpress.org/The_Loop).
+- Vietnamese (vi_VN) language packs added.
+- German (de_DE) language packs added.
+- Finnish (fi) language packs added.
+- Italian (it_IT) language packs added.
+- Japanese (ja) language packs added.
+
 ### 1.0.0 (June 12th, 2014)
 - Initial Release ([Launch Announcement](https://philiparthurmoore.com/subtitles))
 
