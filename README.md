@@ -248,3 +248,15 @@ Two primary screenshots have been shown in this README.md file, one of the post 
 ## Translations
 
 See the [languages](https://github.com/philiparthurmoore/Subtitles/tree/master/languages) folder for more information on using _Subtitles_ in your language.
+
+## Versioning
+
+I've done my best to adhere to [Semantic Versioning](http://semver.org) for _Subtitles_.
+
+Given a version number MAJOR.MINOR.PATCH, increment the:
+
+1. MAJOR version when you make incompatible API changes,
+2. MINOR version when you add functionality in a backwards-compatible manner, and
+3. PATCH version when you make backwards-compatible bug fixes.
+
+Most of the updates for this plugin will be in the form of bug fixes and minor enhancements.
