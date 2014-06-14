@@ -236,8 +236,140 @@ class Subtitles {
 		 */
 		if ( ! is_admin() ) { // Don't touch anything inside of the WordPress Dashboard, yet.
 			add_filter( 'the_title',          array( &$this, 'the_subtitle' ) );
+			/**
+			 * Make sure that Subtitles plays nice with WordPress SEO plugin by Yoast
+			 *
+			 * @link https://wordpress.org/plugins/wordpress-seo/
+			 * @link https://github.com/philiparthurmoore/Subtitles/issues/5
+			 *
+			 * @since 1.0.1
+			 */
+			add_filter( 'wp_seo_get_bc_title', array( &$this, 'plugin_compat_wordpress_seo' ) );
 		}
 	} // end method __construct()
+
+	/**
+	 * Make sure that Subtitles plays nice with WordPress SEO plugin by Yoast.
+	 *
+	 * The plugin features breadcrumb functionality, which users can add into their themes
+	 * by using functionality that's specific to the plugin. Because it's so popular and
+	 * I'm not sure where or how people will insert their breadcrumbs into their template
+	 * files, it's best avoid messing with the plugin altogether. We'll filter the output
+	 * and make sure that subtitles isn't included in any of the breadcrumb titles.
+	 *
+	 * @link https://wordpress.org/plugins/wordpress-seo/
+	 * @link https://github.com/philiparthurmoore/Subtitles/issues/5
+	 * @link http://us1.php.net//manual/en/function.strlen.php
+	 * @see get_the_subtitle()
+	 *
+	 * @since 1.0.1
+	 */
+	public function plugin_compat_wordpress_seo( $title ) {
+		/**
+		 * This issue only arrises when breadcrumbs are placed inside of The Loop,
+		 * so we'll first check to see if we're in The Loop, and if not, just bail
+		 * on this altogether.
+		 *
+		 * @link http://codex.wordpress.org/Function_Reference/in_the_loop
+		 *
+		 * @since 1.0.1
+		 */
+		$in_the_loop = (bool) in_the_loop();
+		if ( ! $in_the_loop ) {
+			return $title;
+		}
+
+		/**
+		 * Grab the post subtitle.
+		 *
+		 * Example: (string) "Subtitle"
+		 *
+		 * @see get_the_subtitle()
+		 *
+		 * @since 1.0.1
+		 */
+		$post_subtitle = get_the_subtitle();
+
+		/**
+		 * Grab the length of the post subtitle.
+		 *
+		 * We're also using a negative value of the legnth of the subtitle.
+		 *
+		 * Example: (int) 8
+		 *
+		 * @link http://us1.php.net//manual/en/function.strlen.php
+		 *
+		 * @since 1.0.1
+		 */
+		$post_subtitle_length = (int) strlen( $post_subtitle );
+		$post_subtitle_length_neg = -1 * $post_subtitle_length;
+
+		/**
+		 * Grab the already filtered post title.
+		 *
+		 * Example: (string) "Post TitleSubtitle"
+		 */
+		$post_title = $title;
+
+		/**
+		 * Grab the length of the filtered post title.
+		 *
+		 * Example: (int) 18
+		 */
+		$post_title_length = (int) strlen( $post_title );
+
+		/**
+		 * Check for a few specific cases:
+		 *
+		 * 1. Does the subtitle of the current post equal the title of any of its ancestors?
+		 * 2. Is the post title that's being checked empty?
+		 *
+		 * If so, then bail out on this.
+		 *
+		 * Example: If the subtitle of the page is "Features" and one of the parent breadcrumbs also
+		 * has the name "Features", then we don't want to mess that up, so we'll make sure that we bail out
+		 * early on this function.
+		 *
+		 * @since 1.0.1
+		 */
+		if ( ( $post_title == $post_subtitle ) || ( '' == $post_title ) ) {
+			return $title;
+		}
+
+		/**
+		 * Remove the subtitle from the "title" string so that it shows up properly.
+		 *
+		 * Example: If the post title that we've brought into the function is called "Post TitleSubtitle",
+		 * then all we really want is the the title to say "Post Title", so we'll use the length of the subtitle
+		 * to cut that many characters off of the end of the post title, and hope to end up with "Post Title".
+		 *
+		 * @see apply_filters()
+		 * @link http://us2.php.net//manual/en/function.substr.php
+		 *
+		 * @since 1.0.1
+		 */
+		$post_title = substr( $post_title, 0, $post_subtitle_length_neg );
+		$post_title = apply_filters( 'compat_wordpress_seo', $post_title );
+
+		/**
+		 * Make sure that the new title and its subtitle is the right string that
+		 * we want to manipulate, by comparing the post title + subtitle against
+		 * the original title that we brought into this function.
+		 *
+		 * Example: The original title brought in was "Post TitleSubtitle", so we'll
+		 * make sure that "Post Title" + "Subtitle" is actually "Post TitleSubtitle".
+		 *
+		 * @since 1.0.1
+		 */
+		$reconstructed_title = $post_title . $post_subtitle;
+
+		if ( $reconstructed_title == $title ) {
+			return $post_title;
+		}
+
+		// else just return the title that was brought into the function
+		return $title;
+	} // end plugin_compat_wordpress_seo()
 
 	/**
 	 * Add default support for subtitles on posts and pages.
