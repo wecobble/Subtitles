@@ -235,7 +235,7 @@ class Subtitles {
 		 * @since 1.0.0
 		 */
 		if ( ! is_admin() ) { // Don't touch anything inside of the WordPress Dashboard, yet.
-			add_filter( 'the_title',           array( &$this, 'the_subtitle' ) );
+			add_filter( 'the_title',           array( &$this, 'the_subtitle' ), 10, 2 );
 
 			/**
 			 * Let's also filter the dedicated function for single post titles
@@ -244,7 +244,7 @@ class Subtitles {
 			 *
 			 * @since 1.0.1
 			 */
-			add_filter( 'single_post_title',   array( &$this, 'the_subtitle' ) );
+			add_filter( 'single_post_title',   array( &$this, 'the_subtitle' ), 10, 2 );
 
 			/**
 			 * Make sure that Subtitles plays nice with WordPress SEO plugin by Yoast
@@ -517,7 +517,7 @@ class Subtitles {
 	 *
 	 * @since 1.0.0
 	 */
-	public function the_subtitle( $title ) {
+	public function the_subtitle( $title, $id ) {
 		/**
 		 * Which globals will we need?
 		 *
@@ -553,9 +553,30 @@ class Subtitles {
 		 * This can happen when something is used within the loop that outputs titles,
 		 * like navigation between single posts on a blog.
 		 *
+		 * $id should not be an object, and if it is then the single_post_title() filter is likely
+		 * being invoked, so we'll need a check against that.
+		 *
+		 * Here's a more detailed explanation:
+		 *
+		 * 1. the_title() can be filtered with apply_filters( 'the_title', $title, $id ).
+		 *    This means that the second argument needs to be an integer, which will be the ID of a post.
+		 * 2. single_post_title() can be filtered with apply_filters( 'single_post_title', $_post->post_title, $_post ).
+		 *    This means that the second argument needs to be the entire post object.
+		 *
+		 * So if we're checking $id and it's an object, then there's a good chance that single_post_title()
+		 * is being used and we need to reassign $id to be ID of the object WP_Post.
+		 *
+		 * @see the_title()
+		 * @see single_post_title()
+		 * @see get_the_ID()
+		 * @see is_object()
+		 *
 		 * @since 1.0.0
 		 */
-		if ( isset( $post->post_title ) && $title != $post->post_title ) {
+		if ( isset( $id ) && is_object( $id ) ) { // single_post_title() is being used.
+			$id = $id->ID; // grab the ID from the post object.
+		}
+		if ( isset( $post->post_title ) && $id != get_the_ID() ) {
 			return $title;
 		}
 
