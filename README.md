@@ -238,7 +238,7 @@ An ID isn't necessary for `get_the_subtitle`, but will work for retrieving subti
 
 ## Changelog
 
-All prior releases of _Subtitles_ can be found on the [Releases](https://github.com/philiparthurmoore/Subtitles/releases) page.
+All versions of _Subtitles_ can be found on the [Releases](https://github.com/philiparthurmoore/Subtitles/releases) page.
 
 ### v1.0.1 (June 14th, 2014)
 
