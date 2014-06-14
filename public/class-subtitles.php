@@ -235,7 +235,17 @@ class Subtitles {
 		 * @since 1.0.0
 		 */
 		if ( ! is_admin() ) { // Don't touch anything inside of the WordPress Dashboard, yet.
-			add_filter( 'the_title',          array( &$this, 'the_subtitle' ) );
+			add_filter( 'the_title',           array( &$this, 'the_subtitle' ) );
+
+			/**
+			 * Let's also filter the dedicated function for single post titles
+			 *
+			 * @link https://github.com/philiparthurmoore/Subtitles/issues/2
+			 *
+			 * @since 1.0.1
+			 */
+			add_filter( 'single_post_title',   array( &$this, 'the_subtitle' ) );
+
 			/**
 			 * Make sure that Subtitles plays nice with WordPress SEO plugin by Yoast
 			 *

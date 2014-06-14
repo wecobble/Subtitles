@@ -242,6 +242,7 @@ An ID isn't necessary for `get_the_subtitle`, but will work for retrieving subti
 
 - Bug Fix: Resolve title output issues when [WordPress SEO by Yoast](https://wordpress.org/plugins/wordpress-seo/) breadcrumbs are used inside of [The Loop](http://codex.wordpress.org/The_Loop) (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/5)).
 - Bug Fix: Remove unnecessary ID checks against nav menus (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/4)).
+- Bug Fix: Make sure that the plugin automatically works with `single_post_title` (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/2)).
 - Extra: Vietnamese (vi_VN) language packs added.
 - Extra: German (de_DE) language packs added.
 - Extra: Finnish (fi) language packs added.
