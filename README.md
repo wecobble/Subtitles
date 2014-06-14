@@ -238,7 +238,9 @@ An ID isn't necessary for `get_the_subtitle`, but will work for retrieving subti
 
 ## Changelog
 
-### 1.0.1 (June 14th, 2014)
+All prior releases of _Subtitles_ can be found on the [Releases](https://github.com/philiparthurmoore/Subtitles/releases) page.
+
+### v1.0.1 (June 14th, 2014)
 
 - Bug Fix: Make sure that the plugin automatically works with `single_post_title` (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/2)).
 - Bug Fix: Ensure that special characters in post titles do not erroneously cause subtitles to be skipped during title filtering and checks (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/3)).
@@ -250,7 +252,7 @@ An ID isn't necessary for `get_the_subtitle`, but will work for retrieving subti
 - Extra: Italian (it_IT) language packs added.
 - Extra: Japanese (ja) language packs added.
 
-### 1.0.0 (June 12th, 2014)
+### v1.0.0 (June 12th, 2014)
 - Initial Release ([Launch Announcement](https://philiparthurmoore.com/subtitles))
 
 ## Screenshots
