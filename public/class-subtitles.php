@@ -659,7 +659,7 @@ class Subtitles {
 		 *
 		 * @since 1.0.0
 		 */
-		$title = $title . $subtitle;
+		$title = $title . ' ' . $subtitle;
 
 		/**
 		 * Filter the post subtitle, if necessary.
