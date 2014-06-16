@@ -9,6 +9,7 @@ Right now, _Subtitles_ is available in the following languages:
 - German ([Ellen Bauer](https://profiles.wordpress.org/elmastudio))
 - Italian (Roberto Pizzo)
 - Japanese ([Naoko Takano](http://profiles.wordpress.org/nao))
+- Korean ([Justin Kopepasah](http://profiles.wordpress.org/kopepasah))
 - Vietnamese ([Philip Arthur Moore](https://profiles.wordpress.org/philiparthurmoore))
 
 All available translations for the plugin are located in this folder.
