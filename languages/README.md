@@ -2,14 +2,15 @@
 
 This plugin currently only uses one translatable string: **Enter subtitle here**. I'll need your help translating that phrase into your language.
 
-Right now, _Subtitles_ is available in the following languages:
+Right now, _Subtitles_ is available in the following additional languages:
 
-- English ([Philip Arthur Moore](https://profiles.wordpress.org/philiparthurmoore))
+- Catalan (José Luis Cruz)
 - Finnish ([Sami Keijonen](http://profiles.wordpress.org/samikeijonen))
 - German ([Ellen Bauer](https://profiles.wordpress.org/elmastudio))
 - Italian (Roberto Pizzo)
 - Japanese ([Naoko Takano](http://profiles.wordpress.org/nao))
 - Korean ([Justin Kopepasah](http://profiles.wordpress.org/kopepasah))
+- Spanish (José Luis Cruz)
 - Vietnamese ([Philip Arthur Moore](https://profiles.wordpress.org/philiparthurmoore))
 
 All available translations for the plugin are located in this folder.
