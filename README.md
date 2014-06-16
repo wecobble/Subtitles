@@ -4,16 +4,6 @@
 
 Add subtitles into your WordPress posts, pages, custom post types, and themes. No coding required. Simply activate _Subtitles_ and you're ready to go.
 
-```css
-Contributors: philiparthurmoore
-Tags: subtitle, subtitles, title, titles
-Requires at least: 3.9
-Tested up to: 3.9.1
-Stable tag: 1.0.1
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-```
-
 Right now WordPress currently presents no easy way for web publishers to add subtitles into their posts, pages, and other custom post types. This leaves users and developers in a bit of a quandary, trying to figure out how best to present subtitles in a beautiful and sensible way. Post [excerpts](http://codex.wordpress.org/Function_Reference/the_excerpt) are a very poor choice for subtitles and the only available option outside of [custom fields](http://codex.wordpress.org/Custom_Fields), but custom fields aren't entirely self-explanatory or user-friendly. This simple, straightforward plugin aims to solve this issue.
 
 Simply download _Subtitles_, activate it, and begin adding subtitles into your posts and pages today. For more advanced usage of the plugin, please see the [Frequently Asked Questions](https://github.com/philiparthurmoore/Subtitles/blob/master/README.md#frequently-asked-questions).
