@@ -9,7 +9,7 @@ Contributors: philiparthurmoore
 Tags: subtitle, subtitles, title, titles
 Requires at least: 3.9
 Tested up to: 3.9.1
-Stable tag: [1.0.1](https://github.com/philiparthurmoore/Subtitles#v101-june-14th-2014)
+Stable tag: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 ```
