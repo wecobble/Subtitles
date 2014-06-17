@@ -526,6 +526,18 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			global $post;
 
 			/**
+			 * Check if $post is set. There's a chance that this can
+			 * be NULL on search results pages with zero results.
+			 *
+			 * @link https://github.com/philiparthurmoore/Subtitles/issues/12
+			 *
+			 * @since 1.0.2
+			 */
+			if ( ! isset( $post ) ) {
+				return $title;
+			}
+
+			/**
 			 * Make sure we're not touching any of the titles in the Dashboard
 			 * This filtering should only happen on the front end of the site.
 			 *
