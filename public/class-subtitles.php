@@ -98,7 +98,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		 * Subtitles::$instance
 		 *
 		 * And this is how you would access a static method:
-		 * Subtitles::getInstance()
+		 * Subtitles::getinstance()
 		 *
 		 * Note: &$this refers to a current object (class instance) while
 		 * self:: or static:: refers to the current class.
@@ -143,7 +143,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		public static function getInstance() {
+		public static function getinstance() {
 			$called_class = get_called_class();
 
 			if ( ! isset( self::$instances[ $called_class ] ) ) { // 'self' in this context refers to the current class in use
@@ -151,7 +151,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			}
 
 			return self::$instances[ $called_class ];
-		} // end method getInstance()
+		} // end method getinstance()
 
 		/**
 		 * Declare constructor methods for the class Subtitles.

@@ -137,7 +137,7 @@ add_action(
 		// The primary front-end class.
 		'Subtitles',
 		// Instantiation method within the class.
-		'getInstance',
+		'getinstance',
 	)
 ); // end add_action()
 
@@ -186,7 +186,7 @@ if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
 			// The primary admin class for Subtitles.
 			'Subtitles_Admin',
 			// Instantiation method within the class.
-			'getInstance',
+			'getinstance',
 		)
 	); // end add_action()
 } // end is_admin and DOING_AJAX checks
