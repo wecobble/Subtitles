@@ -36,10 +36,11 @@ if ( ! function_exists( 'the_subtitle' ) ) {
 
 		$subtitle = $before . $subtitle . $after;
 
-		if ( $echo )
-			echo $subtitle;
-		else
+		if ( $echo ) {
+			echo html_entity_decode( wp_unslash( esc_html( $subtitle ) ) );
+		} else {
 			return $subtitle;
+		}
 	} // end the_subtitle()
 } // end the_subtitle check
 
