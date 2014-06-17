@@ -134,8 +134,10 @@ require plugin_dir_path( __FILE__ ) . 'public/class-subtitles.php';
 add_action(
 	'plugins_loaded', // The hook on which Subtitles is fired.
 	array(
-		'Subtitles', // The primary front-end class.
-		'getInstance', // Instantiation method within the class.
+		// The primary front-end class.
+		'Subtitles',
+		// Instantiation method within the class.
+		'getInstance',
 	)
 ); // end add_action()
 
@@ -181,8 +183,10 @@ if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
 	add_action(
 		'plugins_loaded', // The hook on which Subtitles_Admin is fired.
 		array(
-			'Subtitles_Admin', // The primary admin class for Subtitles.
-			'getInstance', // Instantiation method within the class.
+			// The primary admin class for Subtitles.
+			'Subtitles_Admin',
+			// Instantiation method within the class.
+			'getInstance',
 		)
 	); // end add_action()
 } // end is_admin and DOING_AJAX checks
