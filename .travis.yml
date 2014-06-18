@@ -51,11 +51,13 @@ matrix:
     fast_finish: true
 
 # Use this to prepare the system to install prerequisites or dependencies.
-# e.g. sudo apt-get update
+# e.g. sudo apt-get update.
+# Failures in this section will result in build status 'errored'.
 # before_install:
 
 # Use this to prepare your build for testing.
 # e.g. copy database configurations, environment variables, etc.
+# Failures in this section will result in build status 'errored'.
 before_script:
     # Install and/or Update Composer, depending on PHP version.
     # @link https://getcomposer.org/
@@ -111,5 +113,6 @@ script:
 # Receive notifications for build results.
 # @link http://docs.travis-ci.com/user/notifications/#Email-notifications
 notifications:
+    email: false
     slack:
         secure: "af84yPHjI6Yk48Ea5ZvtYS2GJ3u+db+49/cYy/S4kwO3NaagvTt6XqHQdhZfXHdel2DJ6uS42/MEqYbZ2OR8Avj7jgRWGV6603itByyTHDlcJZ2U/jruHCW6LbipziBI60ipID2aDM4Bs+Pw8utfJu7I47ddcw2hYl1cBrkpZk0="
