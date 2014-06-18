@@ -15,4 +15,9 @@
 		 verbose="true"
 		 strict="false"
 		 bootstrap="tests/bootstrap.php">
+	<testsuites>
+		<testsuite>
+			<directory prefix="test-" suffix=".php">./tests/</directory>
+		</testsuite>
+	</testsuites>
 </phpunit>
