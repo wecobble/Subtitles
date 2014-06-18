@@ -232,7 +232,7 @@ All versions of _Subtitles_ can be found on the [Releases](https://github.com/ph
 
 ### [v1.0.2](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.2) (June 18th, 2014)
 
-- Buf Fix: Check if `$post` is set before proceeding with any title filtering for subtitles (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/12)).
+- Bug Fix: Check if `$post` is set before proceeding with any title filtering for subtitles (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/12)).
 - Bug Fix: Add a single space between titles and subtitles so that they look sensible when being output as a title attribute (see [commit](https://github.com/philiparthurmoore/Subtitles/commit/5b54263fcf82de6db9e7e0875a0a99974758a81f)).
 - Extra: Catalan (ca) language packs added (see [issue](https://github.com/philiparthurmoore/Subtitles/pull/11)).
 - Extra: Korean (ko_KR) language packs added (see [issue](https://github.com/philiparthurmoore/Subtitles/pull/10)).
