@@ -15,9 +15,4 @@
 		 verbose="true"
 		 strict="false"
 		 bootstrap="tests/bootstrap.php">
-	<testsuites>
-		<testsuite name="Subtitles WordPress Plugin Test Suite">
-			<directory prefix="test-" suffix=".php">./tests/</directory>
-		</testsuite>
-	</testsuites>
 </phpunit>
