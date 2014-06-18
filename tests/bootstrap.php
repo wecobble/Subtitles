@@ -26,7 +26,7 @@ ini_set( 'display_errors', 'on' ); // Display errors.
  *
  * @since 1.0.2
  */
-if( function_exists( 'xdebug_disable' ) ) {
+if ( function_exists( 'xdebug_disable' ) ) {
 	xdebug_disable();
 } // end if xdebug_disable check
 
@@ -41,9 +41,9 @@ if( function_exists( 'xdebug_disable' ) ) {
  *
  * @since 1.0.2
  */
-echo "Subtitles WordPress Plugin Unit Testing Suite v1.0.2" . PHP_EOL;
-echo "Author: Philip Arthur Moore" . PHP_EOL;
-echo "License: GNU General Public License v2 or later" . PHP_EOL . PHP_EOL;
+echo 'Subtitles WordPress Plugin Unit Testing Suite v1.0.2' . PHP_EOL;
+echo 'Author: Philip Arthur Moore' . PHP_EOL;
+echo 'License: GNU General Public License v2 or later' . PHP_EOL . PHP_EOL;
 
 /**
  * Define Subtitles plugin directory.
@@ -82,7 +82,7 @@ $GLOBALS[ 'wp_tests_options' ] = array(
  *
  * @since 1.0.2
  */
-if( false !== getenv( 'WP_DEVELOP_DIR' ) ) {
+if ( false !== getenv( 'WP_DEVELOP_DIR' ) ) {
 	// functions used before loading WordPress
 	require getenv( 'WP_DEVELOP_DIR' ) . '/tests/phpunit/includes/functions.php';
 	// Installs WordPress for running the tests and loads WordPress and the test libraries
