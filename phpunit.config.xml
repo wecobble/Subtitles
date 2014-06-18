@@ -16,8 +16,12 @@
 		 strict="false"
 		 bootstrap="tests/bootstrap.php">
 	<testsuites>
+		<!-- Default test suite to run all tests. -->
 		<testsuite>
 			<directory prefix="test-" suffix=".php">./tests/</directory>
 		</testsuite>
 	</testsuites>
+	<logging>
+		<log type="coverage-html" target="coverage" title="PHPUnit" charset="UTF-8" yui="true" highlight="true" />
+	</logging>
 </phpunit>
