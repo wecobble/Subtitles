@@ -1,5 +1,7 @@
 # Subtitles WordPress Plugin
 
+![Travis CI Build Status](https://travis-ci.org/philiparthurmoore/Subtitles.svg?branch=master)
+
 ![Subtitles in action](https://i.cloudup.com/YoFzxUCM2S.png)
 
 Add subtitles into your WordPress posts, pages, custom post types, and themes. No coding required. Simply activate _Subtitles_ and you're ready to go.
@@ -277,3 +279,7 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 3. PATCH version when you make backwards-compatible bug fixes.
 
 Most of the updates for this plugin will be in the form of bug fixes and minor enhancements.
+
+## Build Status
+
+Most commits and pull requests will undergo automatic build testing via [Travis CI](http://travis-ci.org/). The build result for the most recent non-skipped commit for master is at the top of this README.
