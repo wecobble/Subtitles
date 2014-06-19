@@ -34,10 +34,6 @@ env:
     # @link https://github.com/WordPress/WordPress/tree/3.8-branch
     - WP_VERSION=3.8 WP_MULTISITE=0
     - WP_VERSION=3.8 WP_MULTISITE=1
-    # WordPress 3.7
-    # @link https://github.com/WordPress/WordPress/tree/3.7-branch
-    - WP_VERSION=3.7 WP_MULTISITE=0
-    - WP_VERSION=3.7 WP_MULTISITE=1
 
 # Declare 5.6 beta in test matrix.
 # @link https://buddypress.trac.wordpress.org/ticket/5620
