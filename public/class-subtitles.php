@@ -88,8 +88,6 @@ if ( ! class_exists( 'Subtitles' ) ) {
 
 		/**
 		 * If no instance of Subtitles has been made then let's make it.
-		 * And if no instance of a child class of Subtitles has been made,
-		 * then let's make that also.
 		 *
 		 * Declaring class properties or methods as static makes them accessible
 		 * without needing an instantiation of the class Subtitles.
@@ -100,20 +98,14 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		 * And this is how you would access a static method:
 		 * Subtitles::getinstance()
 		 *
-		 * Note: &$this refers to a current object (class instance) while
-		 * self:: or static:: refers to the current class.
-		 *
-		 * - self:: used at definition
-		 * - static:: used at execution (late static binding)
-		 *
 		 * @link http://www.php.net/manual/en/language.oop5.late-static-bindings.php
-		 * @var array $instances
+		 * @var object $instance
 		 * @access private
 		 * @static
 		 *
 		 * @since 1.0.0
 		 */
-		private static $instances = array();
+		private static $instance = null;
 
 		/**
 		 * Kick off the class if it hasn't been instantiated.
@@ -144,13 +136,11 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		 * @since 1.0.0
 		 */
 		public static function getinstance() {
-			$called_class = get_called_class();
-
-			if ( ! isset( self::$instances[ $called_class ] ) ) { // 'self' in this context refers to the current class in use
-				self::$instances[ $called_class ] = new static;
+			if ( ! self::$instance ) {
+				self::$instance = new Subtitles;
 			}
 
-			return self::$instances[ $called_class ];
+			return self::$instance;
 		} // end method getinstance()
 
 		/**

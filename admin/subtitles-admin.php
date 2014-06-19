@@ -32,6 +32,27 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 	 */
 	class Subtitles_Admin extends Subtitles {
 		/**
+		 * Hold the singleton instance of Subtitles_Admin.
+		 *
+		 * @since 1.0.3
+		 */
+		private static $instance = null;
+
+		public static function getinstance() {
+			if ( ! self::$instance ) {
+				self::$instance = new Subtitles_Admin;
+			}
+
+			return self::$instance;
+		} // end method getinstance()
+
+		protected function __clone() {}
+
+		public function __wakeup() {
+			throw new Exception( 'This Singleton cannot be unserialized.' );
+		}
+
+		/**
 		 * Declare constructor methods for the class Subtitles.
 		 *
 		 * Classes which have a constructor method call this method on each newly-created object,
