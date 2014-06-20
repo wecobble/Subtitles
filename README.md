@@ -230,6 +230,10 @@ An ID isn't necessary for `get_the_subtitle`, but will work for retrieving subti
 
 All versions of _Subtitles_ can be found on the [Releases](https://github.com/philiparthurmoore/Subtitles/releases) page.
 
+### [v1.0.4](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.4) (June 20th, 2014)
+
+- Bug Fix: Make sure that other plugins that try to mess with titles do not cause _Subtitles_ to throw PHP warnings due to the second optional `$id` parameter not being sent to the primary `the_subtitles` method used throughout sites (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/16)).
+
 ### [v1.0.3](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.3) (June 19th, 2014)
 
 - Bug Fix: Ensure that _Subtitles_ works in PHP 5.2.4 environments (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/8)).

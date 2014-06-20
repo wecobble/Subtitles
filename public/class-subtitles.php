@@ -507,7 +507,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		public function the_subtitle( $title, $id ) {
+		public function the_subtitle( $title, $id = null ) {
 			/**
 			 * Which globals will we need?
 			 *
