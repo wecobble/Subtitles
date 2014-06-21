@@ -6,6 +6,7 @@ Right now, _Subtitles_ is available in the following additional languages:
 
 - Catalan ([José Luis Cruz](http://profiles.wordpress.org/joseluiscruz))
 - Finnish ([Sami Keijonen](http://profiles.wordpress.org/samikeijonen))
+- French ([Jean-Christophe Brebion](http://profiles.wordpress.org/jcbrebion))
 - German ([Ellen Bauer](https://profiles.wordpress.org/elmastudio))
 - Italian (Roberto Pizzo)
 - Japanese ([Naoko Takano](http://profiles.wordpress.org/nao))
