@@ -79,10 +79,10 @@ before_script:
     # Install WordPress Coding Standards.
     - git clone https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git wordpress-coding-standards
     # Hop into CodeSniffer scripts directory.
-    - cd php-codesniffer/scripts
+    - cd php-codesniffer
     # Set install path for WordPress Coding Standards
     # @link https://github.com/squizlabs/PHP_CodeSniffer/blob/4237c2fc98cc838730b76ee9cee316f99286a2a7/CodeSniffer.php#L1941
-    - phpcs --config-set installed_paths ../wordpress-coding-standards
+    - scripts/phpcs --config-set installed_paths ../wordpress-coding-standards
     # Hop into plugins directory.
     - cd $plugin_dir
     # After CodeSniffer install you should refresh your path.
