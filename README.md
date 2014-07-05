@@ -234,6 +234,7 @@ All versions of _Subtitles_ can be found on the [Releases](https://github.com/ph
 
 ### v1.0.5 (TBD)
 
+- Bug Fix: Better security for nonce checking after update to the WordPress VIP Coding Standards. See [this discussion](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/190) for more information.
 - Extra: Wrap primary entry title parts in spans that theme authors can take advantage of for more fine-grained styling when a post has a subtitle.
 - Extra: French (fr_FR) language packs added (see [issue](https://github.com/philiparthurmoore/Subtitles/pull/18)).
 

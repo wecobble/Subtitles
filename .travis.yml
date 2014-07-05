@@ -78,7 +78,7 @@ before_script:
     - git clone https://github.com/squizlabs/PHP_CodeSniffer.git php-codesniffer
     # Install WordPress Coding Standards.
     - git clone https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git wordpress-coding-standards
-    # Hop into CodeSniffer scripts directory.
+    # Hop into CodeSniffer directory.
     - cd php-codesniffer
     # Set install path for WordPress Coding Standards
     # @link https://github.com/squizlabs/PHP_CodeSniffer/blob/4237c2fc98cc838730b76ee9cee316f99286a2a7/CodeSniffer.php#L1941
@@ -106,6 +106,7 @@ script:
     # -n flag: Do not print warnings (shortcut for --warning-severity=0)
     # --standard: Use WordPress as the standard.
     # --extensions: Only sniff PHP files.
+    # localhost: /Applications/XAMPP/xamppfiles/htdocs/develop/php-codesniffer/scripts/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php
     - $WP_DEVELOP_DIR/php-codesniffer/scripts/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php
 
 # Receive notifications for build results.
