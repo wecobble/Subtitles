@@ -662,7 +662,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			 *
 			 * @since 1.0.0
 			 */
-			$title = $title . ' ' . $subtitle;
+			$title = '<span class="entry-title-primary">' . $title . '</span> ' . $subtitle;
 
 			/**
 			 * Filter the post subtitle, if necessary.
