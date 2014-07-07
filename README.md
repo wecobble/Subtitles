@@ -232,7 +232,7 @@ An ID isn't necessary for `get_the_subtitle`, but will work for retrieving subti
 
 All versions of _Subtitles_ can be found on the [Releases](https://github.com/philiparthurmoore/Subtitles/releases) page.
 
-### v1.0.5 (July 7th, 2014)
+### [v1.0.5](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.5) (July 7th, 2014)
 
 - Bug Fix: If subtitles are shown in comment areas, we'll hide them by default.
 - Bug Fix: Better security for nonce checking after update to the WordPress VIP Coding Standards. See [this discussion](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/190) for more information.
