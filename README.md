@@ -104,6 +104,15 @@ span.entry-subtitle {
 	display: block; /* Put subtitles on their own line by default. */
 	font-size: 0.53333333333333em; /* Sensible scaling. It's assumed that post titles will be wrapped in heading tags. */
 }
+/**
+ * If subtitles are shown in comment areas, we'll hide them by default.
+ *
+ * @since 1.0.5
+ */
+#comments .comments-title span.entry-subtitle {
+	display: none;
+	font-size: 1em;
+}
 ```
 
 I can certainly see a case for potentially inlining these styles, but I need to first make sure that it makes sense to do so at the expense of documentation and extensibility for potential future enhancements to the plugin.
