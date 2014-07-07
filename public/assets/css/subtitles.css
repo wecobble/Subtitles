@@ -22,3 +22,14 @@ span.entry-subtitle {
 	display: block; /* Put subtitles on their own line by default. */
 	font-size: 0.53333333333333em; /* Sensible scaling. It's assumed that post titles will be wrapped in heading tags. */
 }
+/**
+ * If subtitles are shown in comment areas, make sure that they
+ * are displayed inline, not block. For example, the title
+ * "One Thought on {Post Title} + {Post Subtitle}" should be on one line.
+ *
+ * @since 1.0.5
+ */
+#comments .comments-title span.entry-subtitle {
+	display: inline;
+	font-size: 1em;
+}
