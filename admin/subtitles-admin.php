@@ -199,9 +199,8 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 			 * If the nonce is set then check if it's verified.
 			 * This gets rid of undefined index notices for _subtitle_data_nonce.
 			 */
-			$nonce = sanitize_key( $_POST[ self::SUBTITLE_NONCE_NAME ] );
-
 			if ( $is_nonce_set ) {
+				$nonce = sanitize_key( $_POST[ self::SUBTITLE_NONCE_NAME ] );
 				$is_verified_nonce = (bool) wp_verify_nonce( $nonce, basename( __FILE__ ) );
 			}
 			else {
