@@ -44,7 +44,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		const VERSION = '1.0.5';
+		const VERSION = '1.0.6';
 
 		/**
 		 * Constant used when referencing the plugin in load text domain calls and other
