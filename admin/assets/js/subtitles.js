@@ -45,6 +45,35 @@
 					prompt.removeClass( 'screen-reader-text' );
 				}
 			});
+
+			// Tab from the title to the subtitle, rather than the post content.
+			$( '#title' ).on( 'keydown', function( event ) {
+				if ( event.keyCode === 9 && ! event.ctrlKey && ! event.altKey && ! event.shiftKey ) {
+					$( '#subtitle' ).focus();
+
+					event.preventDefault();
+				}
+			});
+
+			// Tab from the subtitle directly to post content. Borrowed from post.js.
+			$( '#subtitle' ).on( 'keydown.editor-focus', function( event ) {
+				var editor, $textarea;
+
+				if ( event.keyCode === 9 && ! event.ctrlKey && ! event.altKey && ! event.shiftKey ) {
+					editor = typeof tinymce != 'undefined' && tinymce.get( 'content' );
+					$textarea = $( '#content' );
+
+					if ( editor && ! editor.isHidden() ) {
+						editor.focus();
+					} else if ( $textarea.length ) {
+						$textarea.focus();
+					} else {
+						return;
+					}
+
+					event.preventDefault();
+				}
+			});
 		});
 	}
 
