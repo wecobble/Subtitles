@@ -215,14 +215,14 @@ If you'd like to change this behavior, you can do so by taking advantage of `sub
  * @uses  function in_the_loop
  */
 function subtitles_mod_supported_views() {
-	// Default in The Loop behavior from Subtitles.
-	if ( in_the_loop() ) {
-		return true;
-	}
-
 	// Ditch subtitles in archives.
 	if ( is_archive() ) {
 		return false;
+	}
+
+	// Default in The Loop behavior from Subtitles.
+	if ( in_the_loop() ) {
+		return true;
 	}
 } // end function subtitles_mod_supported_views
 add_filter( 'subtitle_view_supported', 'subtitles_mod_supported_views' );
