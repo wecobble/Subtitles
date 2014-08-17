@@ -5,7 +5,7 @@
  * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
  * Author: Philip Arthur Moore
  * Author URI: https://philiparthurmoore.com/
- * Version: 1.0.6
+ * Version: 1.0.7
  * Text Domain: subtitles
  * Domain Path: /languages/
  * License: GNU General Public License v2 or later
