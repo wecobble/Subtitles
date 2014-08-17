@@ -212,7 +212,7 @@ If you'd like to change this behavior, you can do so by taking advantage of `sub
  * Disable Subtitles in archive views.
  *
  * @uses  function is_archive
- * @uses  function subtitles_mod_supported_views
+ * @uses  function in_the_loop
  */
 function subtitles_mod_supported_views() {
 	// Default in The Loop behavior from Subtitles.
