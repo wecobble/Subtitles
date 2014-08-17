@@ -68,7 +68,7 @@ When you uninstall _Subtitles_, nothing will happen to your subtitles post meta.
 
 There are two primary issues that may cause users to think that _Subtitles_ doesn't work: 1) no subtitles show on the site or 2) weird HTML begins to appear around titles on a site. I will address both of those here.
 
-#### Subtitles Doesn't Show Up
+#### Subtitles Don't Show Up On My Site!
 
 Subtitles relies on two things to work properly: 1) `the_title` being present in your theme and 2) the [WordPress Loop](http://codex.wordpress.org/The_Loop). This plugin works by automatically filtering all appropriate post titles so that you are not put in the position of needing to open your theme files manually and using the [custom template tags](https://github.com/philiparthurmoore/Subtitles#using-template-tags) that are available in this plugin.
 
