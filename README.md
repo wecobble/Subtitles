@@ -208,14 +208,24 @@ By default, subtitles appear on most views throughout a site. This includes sing
 If you'd like to change this behavior, you can do so by taking advantage of `subtitle_view_supported`. For example, if you'd like to hide subtitles on all archive pages, the following code would work:
 
 ```php
-function subtitle_views( $view ) {
+/**
+ * Disable Subtitles in archive views.
+ *
+ * @uses  function is_front_page
+ * @uses  function creative_portfolio_has_featured_posts
+ */
+function subtitles_mod_supported_views() {
+	// Default in The Loop behavior from Subtitles.
+	if ( in_the_loop() ) {
+		return true;
+	}
+
+	// Ditch subtitles in archives.
 	if ( is_archive() ) {
 		return false;
 	}
-
-	return $view;
-}
-add_filter( 'subtitle_view_supported', 'subtitle_views' );
+} // end function subtitles_mod_supported_views
+add_filter( 'subtitle_view_supported', 'subtitles_mod_supported_views' );
 ```
 
 ---
