@@ -64,6 +64,26 @@ When you uninstall _Subtitles_, nothing will happen to your subtitles post meta.
 
 ---
 
+### _Subtitles_ Doesn't Work! ###
+
+There are two primary issues that may cause users to think that _Subtitles_ doesn't work: 1) no subtitles show on the site or 2) weird HTML begins to appear around titles on a site. I will address both of those here.
+
+#### Subtitles Doesn't Show Up
+
+Subtitles relies on two things to work properly: 1) `the_title` being present in your theme and 2) the [WordPress Loop](http://codex.wordpress.org/The_Loop). This plugin works by automatically filtering all appropriate post titles so that you are not put in the position of needing to open your theme files manually and using the [custom template tags](https://github.com/philiparthurmoore/Subtitles#using-template-tags) that are available in this plugin.
+
+Some themes use titles outside of the standard WordPress Loop, which means that _Subtitles_ won't touch those. If you would like to use subtitles in a non-standard area of your site, outside of the Loop, then you can either change the views that are [supported by the plugin](https://github.com/philiparthurmoore/Subtitles#modifying-supported-subtitles-views) or manually use the template tags that are available to you in this plugin.
+
+The reason this approach has been taken is because if titles outside of the Loop were touched so liberally, you would end up seeing subtitles in places on your site that you wouldn't want them, like in sidebars, navigation menus, and admin screens.
+
+#### There's Weird HTML Showing Up On My Site!
+
+I can almost guarantee that the reason this is happening is because your theme developer is using either `the_title` or `get_the_title` in places where they should not be used. This is a theme bug, not a plugin bug. When titles are used as attributes, the appropriate template tag to use is `the_title_attribute`, never `the_title`.
+
+Please see [these long threads](https://github.com/philiparthurmoore/Subtitles/issues?q=the_title_attribute) as examples of what happens when themes conflict with _Subtitles_.
+
+---
+
 ### SEO ###
 
 Will _Subtitles_ ruin your SEO? That's a fair question. The answer is no. I've made a note of exactly why `<spans>` are the default wrappers for subtitles in the [inline developer docs](https://github.com/philiparthurmoore/Subtitles/blob/master/subtitles.php) for the plugin, which I'll reiterate here:
