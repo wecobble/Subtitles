@@ -402,6 +402,20 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			 * @since 1.0.0
 			 */
 			add_post_type_support( 'page', self::SUBTITLE_FEATURE_SUPPORT );
+
+			/**
+			 * Automatically enable subtitles support for Jetpack Portfolios
+			 *
+			 * This can be overriden within themes.
+			 *
+			 * @see  add_post_type_support()
+			 * @link http://codex.wordpress.org/Function_Reference/add_post_type_support
+			 * @link http://jetpack.me
+			 * @see  SUBTITLE_FEATURE_SUPPORT
+			 *
+			 * @since 1.0.7
+			 */
+			add_post_type_support( 'jetpack-portfolio', self::SUBTITLE_FEATURE_SUPPORT );
 		} // end add_subtitles_support()
 
 		/**
