@@ -273,7 +273,7 @@ All versions of _Subtitles_ can be found on the [Releases](https://github.com/ph
 
 ### [v1.0.7](#) (August 17th, 2014)
 
-- To-Do
+- Bug Fix: Better backend tabbling from the title to the subtitle input field (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/23)).
 
 ### [v1.0.6](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.6) (August 4th, 2014)
 
