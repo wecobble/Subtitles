@@ -211,8 +211,8 @@ If you'd like to change this behavior, you can do so by taking advantage of `sub
 /**
  * Disable Subtitles in archive views.
  *
- * @uses  function is_front_page
- * @uses  function creative_portfolio_has_featured_posts
+ * @uses  function is_archive
+ * @uses  function subtitles_mod_supported_views
  */
 function subtitles_mod_supported_views() {
 	// Default in The Loop behavior from Subtitles.
