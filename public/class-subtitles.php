@@ -195,14 +195,12 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			add_action( 'init',               array( &$this, 'load_subtitles_textdomain' ) );
 
 			/**
-			 * Enqueue front-end scripts and styles.
+			 * Output front-end styles for Subtitles via wp_head
 			 *
 			 * @see add_action()
-			 * @link http://codex.wordpress.org/Function_Reference/add_action
-			 *
-			 * @since 1.0.0
+			 * @since 1.0.8
 			 */
-			add_action( 'wp_enqueue_scripts', array( &$this, 'subtitle_scripts' ) );
+			add_action( 'wp_head', array( &$this, 'subtitle_styling' ) );
 
 			/**
 			 * Filter post titles to display subtitles properly.
@@ -489,32 +487,37 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		}
 
 		/**
-		 * Enqueue front-end scripts and styles.
+		 * Output front-end styles for Subtitles via wp_head
 		 *
 		 * @access public
-		 *
-		 * @since 1.0.0
+		 * @since  1.0.8
 		 */
-		public function subtitle_scripts() {
-			/**
-			 * Load in main Subtitles stylesheet
-			 *
-			 * wp_enqueue_style accepts
-			 * - $handle Name of the stylesheet.
-			 * - $src    Path to the stylesheet from the root directory of WordPress. Example: '/css/mystyle.css'.
-			 * - $deps   An array of registered style handles this stylesheet depends on. Default empty array.
-			 * - $ver    String specifying the stylesheet version number, if it has one. This parameter is used
-			 *           to ensure that the correct version is sent to the client regardless of caching, and so
-			 *           should be included if a version number is available and makes sense for the stylesheet.
-			 * - $media  Optional. The media for which this stylesheet has been defined.
-			 *           Default 'all'. Accepts 'all', 'aural', 'braille', 'handheld', 'projection', 'print',
-			 *           'screen', 'tty', or 'tv'.
-			 *
-			 * @link http://codex.wordpress.org/Function_Reference/wp_enqueue_style
-			 * @since 1.0.0
-			 */
-			wp_enqueue_style( self::PLUGIN_SLUG . '-style', plugins_url( 'assets/css/subtitles.css' , __FILE__ ), array(), self::VERSION );
-		} // end subtitle_scripts()
+		public function subtitle_styling() { ?>
+			<style type="text/css" media="screen">
+				/**
+				 * Be explicit about this styling only applying to spans,
+				 * since that's the default markup that's returned by
+				 * Subtitles. If a developer overrides the default subtitles
+				 * markup with another element or class, we don't want to stomp
+				 * on that.
+				 *
+				 * @since 1.0.0
+				 */
+				span.entry-subtitle {
+					display: block; /* Put subtitles on their own line by default. */
+					font-size: 0.53333333333333em; /* Sensible scaling. It's assumed that post titles will be wrapped in heading tags. */
+				}
+				/**
+				 * If subtitles are shown in comment areas, we'll hide them by default.
+				 *
+				 * @since 1.0.5
+				 */
+				#comments .comments-title span.entry-subtitle {
+					display: none;
+					font-size: 1em;
+				}
+			</style><?php
+		} // end function subtitle_styling
 
 		/**
 		 * Output the subtitle
