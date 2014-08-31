@@ -271,6 +271,10 @@ An ID isn't necessary for `get_the_subtitle`, but will work for retrieving subti
 
 All versions of _Subtitles_ can be found on the [Releases](https://github.com/philiparthurmoore/Subtitles/releases) page.
 
+### [v1.0.8](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.8) (August 31st, 2014)
+
+- Bug Fix: Better CSS Handling for better overall plugin performance (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/28)).
+
 ### [v1.0.7](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.7) (August 17th, 2014)
 
 - Bug Fix: Better backend tabbing from the title to the subtitle input field (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/23)).
