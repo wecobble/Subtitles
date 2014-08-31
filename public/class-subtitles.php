@@ -495,6 +495,17 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		public function subtitle_styling() { ?>
 			<style type="text/css" media="screen">
 				/**
+				 * Plugin Name: Subtitles
+				 * Plugin URI: http://wordpress.org/plugins/subtitles/
+				 * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
+				 * Author: Philip Arthur Moore
+				 * Author URI: https://philiparthurmoore.com/
+				 * Version: 1.0.8
+				 * License: GNU General Public License v2 or later
+				 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+				 */
+
+				/**
 				 * Be explicit about this styling only applying to spans,
 				 * since that's the default markup that's returned by
 				 * Subtitles. If a developer overrides the default subtitles
