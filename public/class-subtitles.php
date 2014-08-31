@@ -44,7 +44,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		const VERSION = '1.0.8';
+		const VERSION = '2.0.0';
 
 		/**
 		 * Constant used when referencing the plugin in load text domain calls and other
@@ -198,7 +198,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			 * Output front-end styles for Subtitles via wp_head
 			 *
 			 * @see add_action()
-			 * @since 1.0.8
+			 * @since 2.0.0
 			 */
 			add_action( 'wp_head', array( &$this, 'subtitle_styling' ) );
 
@@ -490,7 +490,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		 * Output front-end styles for Subtitles via wp_head
 		 *
 		 * @access public
-		 * @since  1.0.8
+		 * @since  2.0.0
 		 */
 		public function subtitle_styling() { ?>
 			<style type="text/css" media="screen">
@@ -500,7 +500,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 				 * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
 				 * Author: Philip Arthur Moore
 				 * Author URI: https://philiparthurmoore.com/
-				 * Version: 1.0.8
+				 * Version: 2.0.0
 				 * License: GNU General Public License v2 or later
 				 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 				 */

@@ -108,9 +108,20 @@ If you're worried about SEO and the markup of _Subtitles_, then [roll your own m
 
 ### Front-End Performance ###
 
-_Subtitles_ makes one additional server request on the front-end of your website. This is to load sensible CSS that will ensure your subtitle is always scaled properly alongside your website title.
+As of version 2.0.0, _Subtitles_ outputs its CSS via `wp_head`. This is to load sensible CSS that will ensure your subtitle is always scaled properly alongside your website title and never shown in comment areas.
 
 ```css
+/**
+ * Plugin Name: Subtitles
+ * Plugin URI: http://wordpress.org/plugins/subtitles/
+ * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
+ * Author: Philip Arthur Moore
+ * Author URI: https://philiparthurmoore.com/
+ * Version: 2.0.0
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
 /**
  * Be explicit about this styling only applying to spans,
  * since that's the default markup that's returned by
@@ -135,18 +146,15 @@ span.entry-subtitle {
 }
 ```
 
-I can certainly see a case for potentially inlining these styles, but I need to first make sure that it makes sense to do so at the expense of documentation and extensibility for potential future enhancements to the plugin.
-
-For now, if you'd like to remove this additional CSS call, then simply add a similar function to the following in your plugin or theme's primary file:
+If you'd like to remove this additional CSS, then simply add a similar function to the following in your plugin or theme's primary setup file:
 
 ```php
-function ditch_subtitle_styling() {
-	wp_dequeue_style( 'subtitles-style' );
+if ( class_exists( 'Subtitles' ) &&  method_exists( 'Subtitles', 'subtitle_styling' ) ) {
+	remove_action( 'wp_head', array( Subtitles::getInstance(), 'subtitle_styling' ) );
 }
-add_action( 'wp_enqueue_scripts', 'ditch_subtitle_styling' );
 ```
 
-After doing this, nothing should be loaded on the front end of your site and you'll need to style subtitles using your own CSS.
+After doing this, no styling should be loaded on the front end of your site and you'll need to style subtitles using your own CSS.
 
 ---
 
@@ -271,9 +279,9 @@ An ID isn't necessary for `get_the_subtitle`, but will work for retrieving subti
 
 All versions of _Subtitles_ can be found on the [Releases](https://github.com/philiparthurmoore/Subtitles/releases) page.
 
-### [v1.0.8](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.8) (August 31st, 2014)
+### [v2.0.0](https://github.com/philiparthurmoore/Subtitles/releases/tag/v2.0.0) (August 31st, 2014)
 
-- Bug Fix: Better CSS Handling for better overall plugin performance (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/28)).
+- Performance Fix: Better CSS Handling for better overall plugin performance (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/28)).
 
 ### [v1.0.7](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.7) (August 17th, 2014)
 
