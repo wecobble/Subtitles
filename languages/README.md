@@ -11,6 +11,7 @@ Right now, _Subtitles_ is available in the following additional languages:
 - Italian (Roberto Pizzo)
 - Japanese ([Naoko Takano](http://profiles.wordpress.org/nao))
 - Korean ([Justin Kopepasah](http://profiles.wordpress.org/kopepasah))
+- Russian ([Dmitry Mayorov](https://profiles.wordpress.org/iamdmitrymayorov))
 - Spanish ([José Luis Cruz](http://profiles.wordpress.org/joseluiscruz))
 - Vietnamese ([Philip Arthur Moore](https://profiles.wordpress.org/philiparthurmoore))
 
