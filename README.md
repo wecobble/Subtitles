@@ -284,7 +284,7 @@ All versions of _Subtitles_ can be found on the [Releases](https://github.com/ph
 - Bug Fix: Do not show subtitles in RSS feeds (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/32)).
 - Extra: Russian (ru_RU) language packs added
 - Extra: Better WordPress Coding Standards
-- Extra: WordPress 4.1 introduced a new hook called `edit_form_before_permalink` that allows us to move Subtitles into a more natural position, just underneath the post title. Let's use that and preserve backwards compatibility for older versions of WordPress.
+- Extra: WordPress 4.1 introduced a new hook called `edit_form_before_permalink` that allows us to move Subtitles into a more natural position, just underneath the post title. Let's use that and preserve backwards compatibility for older versions of WordPress (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/30)).
 
 ### [v2.0.0](https://github.com/philiparthurmoore/Subtitles/releases/tag/v2.0.0) (August 31st, 2014)
 
