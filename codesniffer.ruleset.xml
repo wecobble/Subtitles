@@ -5,8 +5,6 @@
 
 	<!-- Include the WordPress ruleset, with exclusions. -->
 	<rule ref="WordPress">
-		<exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect" />
-
 		<exclude name="WordPress.XSS.EscapeOutput" />
 	</rule>
 </ruleset>
