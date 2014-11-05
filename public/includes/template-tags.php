@@ -31,7 +31,7 @@ if ( ! function_exists( 'the_subtitle' ) ) {
 	function the_subtitle( $before = '', $after = '', $echo = true ) {
 		$subtitle = get_the_subtitle();
 
-		if ( strlen( $subtitle ) == 0 )
+		if ( 0 == strlen( $subtitle ) )
 			return;
 
 		$subtitle = $before . $subtitle . $after;

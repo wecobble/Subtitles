@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * Subtitles uninstall functions.
  *

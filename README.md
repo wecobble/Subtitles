@@ -283,6 +283,7 @@ All versions of _Subtitles_ can be found on the [Releases](https://github.com/ph
 
 - Bug Fix: Do not show subtitles in RSS feeds (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/32)).
 - Extra: Russian (ru_RU) language packs added
+- Extra: Better WordPress Coding Standards
 
 ### [v2.0.0](https://github.com/philiparthurmoore/Subtitles/releases/tag/v2.0.0) (August 31st, 2014)
 

@@ -278,12 +278,12 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 			 * If the new subtitle entered is blank
 			 */
 			if ( '' === $new_subtitle && $current_subtitle ) {
-			 	delete_post_meta(
-			 		$post_id,				// $post_id the post ID
-			 		$subtitle_meta_key,		// $meta_key the metadata name
-			 		$new_subtitle			// $meta_value the metadata value
-			 	);
-		 	}
+				delete_post_meta(
+					$post_id,				// $post_id the post ID
+					$subtitle_meta_key,		// $meta_key the metadata name
+					$new_subtitle			// $meta_value the metadata value
+				);
+			}
 		} // end update_subtitle_data()
 
 		/**
