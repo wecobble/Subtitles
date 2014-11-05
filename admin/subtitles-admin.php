@@ -89,7 +89,11 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 			 *
 			 * @since 1.0.0
 			 */
-			add_action( 'edit_form_after_title', array( &$this, 'build_subtitle_input' ) );
+			if ( version_compare( $GLOBALS[ 'wp_version' ], '4.1-alpha', '<' ) ) {
+				add_action( 'edit_form_after_title', array( &$this, 'build_subtitle_input' ) );
+			} else {
+				add_action( 'edit_form_before_permalink', array( &$this, 'build_subtitle_input' ) );
+			}
 
 			/**
 			 * Validate and update the subtitle input field.
