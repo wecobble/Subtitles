@@ -279,7 +279,7 @@ An ID isn't necessary for `get_the_subtitle`, but will work for retrieving subti
 
 All versions of _Subtitles_ can be found on the [Releases](https://github.com/philiparthurmoore/Subtitles/releases) page.
 
-### [v2.0.1]
+### [v2.0.1](https://github.com/philiparthurmoore/Subtitles/releases/tag/v2.0.1) (November 6th, 2014)
 
 - Bug Fix: Do not show subtitles in RSS feeds (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/32)).
 - Extra: Russian (ru_RU) language packs added
