@@ -281,62 +281,62 @@ All versions of _Subtitles_ can be found on the [Releases](https://github.com/ph
 
 ### [v2.0.1](https://github.com/philiparthurmoore/Subtitles/releases/tag/v2.0.1) (November 6th, 2014)
 
-- Bug Fix: Do not show subtitles in RSS feeds (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/32)).
-- Extra: Russian (ru_RU) language packs added
-- Extra: Better WordPress Coding Standards
-- Extra: WordPress 4.1 introduced a new hook called `edit_form_before_permalink` that allows us to move Subtitles into a more natural position, just underneath the post title. Let's use that and preserve backwards compatibility for older versions of WordPress (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/30)).
+- **Bug Fix:** Do not show subtitles in RSS feeds (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/32)).
+- **Extra:** Russian (ru_RU) language packs added
+- **Extra:** Better WordPress Coding Standards
+- **Extra:** WordPress 4.1 introduced a new hook called `edit_form_before_permalink` that allows us to move Subtitles into a more natural position, just underneath the post title. Let's use that and preserve backwards compatibility for older versions of WordPress (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/30)).
 
 ### [v2.0.0](https://github.com/philiparthurmoore/Subtitles/releases/tag/v2.0.0) (August 31st, 2014)
 
-- Performance Fix: Better CSS Handling for better overall plugin performance (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/28)).
+- **Performance Fix:** Better CSS Handling for better overall plugin performance (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/28)).
 
 ### [v1.0.7](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.7) (August 17th, 2014)
 
-- Bug Fix: Better backend tabbing from the title to the subtitle input field (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/23)).
-- Extra: Add default support for Jetpack Portfolios (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/26)).
+- **Bug Fix:** Better backend tabbing from the title to the subtitle input field (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/23)).
+- **Extra:** Add default support for Jetpack Portfolios (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/26)).
 
 ### [v1.0.6](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.6) (August 4th, 2014)
 
-- Bug Fix: Better visual styling in the back end to keep up with WordPress 4.0
+- **Bug Fix:** Better visual styling in the back end to keep up with WordPress 4.0
 
 ### [v1.0.5](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.5) (July 7th, 2014)
 
-- Bug Fix: If subtitles are shown in comment areas, we'll hide them by default.
-- Bug Fix: Better security for nonce checking after update to the WordPress VIP Coding Standards. See [this discussion](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/190) for more information.
-- Extra: Wrap primary entry title parts in spans that theme authors can take advantage of for more fine-grained styling when a post has a subtitle.
-- Extra: French (fr_FR) language packs added (see [issue](https://github.com/philiparthurmoore/Subtitles/pull/18)).
+- **Bug Fix:** If subtitles are shown in comment areas, we'll hide them by default.
+- **Bug Fix:** Better security for nonce checking after update to the WordPress VIP Coding Standards. See [this discussion](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/190) for more information.
+- **Extra:** Wrap primary entry title parts in spans that theme authors can take advantage of for more fine-grained styling when a post has a subtitle.
+- **Extra:** French (fr_FR) language packs added (see [issue](https://github.com/philiparthurmoore/Subtitles/pull/18)).
 
 ### [v1.0.4](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.4) (June 20th, 2014)
 
-- Bug Fix: Make sure that other plugins that try to mess with titles do not cause _Subtitles_ to throw PHP warnings due to the second optional `$id` parameter not being sent to the primary `the_subtitles` method used throughout sites (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/16)).
+- **Bug Fix:** Make sure that other plugins that try to mess with titles do not cause _Subtitles_ to throw PHP warnings due to the second optional `$id` parameter not being sent to the primary `the_subtitles` method used throughout sites (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/16)).
 
 ### [v1.0.3](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.3) (June 19th, 2014)
 
-- Bug Fix: Ensure that _Subtitles_ works in PHP 5.2.4 environments (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/8)).
+- **Bug Fix:** Ensure that _Subtitles_ works in PHP 5.2.4 environments (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/8)).
 
 ### [v1.0.2](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.2) (June 18th, 2014)
 
-- Bug Fix: Check if `$post` is set before proceeding with any title filtering for subtitles (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/12)).
-- Bug Fix: Add a single space between titles and subtitles so that they look sensible when being output as a title attribute (see [commit](https://github.com/philiparthurmoore/Subtitles/commit/5b54263fcf82de6db9e7e0875a0a99974758a81f)).
-- Extra: Catalan (ca) language packs added (see [issue](https://github.com/philiparthurmoore/Subtitles/pull/11)).
-- Extra: Korean (ko_KR) language packs added (see [issue](https://github.com/philiparthurmoore/Subtitles/pull/10)).
-- Extra: Spanish (es_ES) language packs added (see [issue](https://github.com/philiparthurmoore/Subtitles/pull/11)).
-- Extra: Begin preparing plugin for better automated testing via [Travis CI](https://travis-ci.org/), [phpunit](https://github.com/sebastianbergmann/phpunit/), [WordPress Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards), and [CodeSniffer](http://pear.php.net/package/PHP_CodeSniffer/)
+- **Bug Fix:** Check if `$post` is set before proceeding with any title filtering for subtitles (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/12)).
+- **Bug Fix:** Add a single space between titles and subtitles so that they look sensible when being output as a title attribute (see [commit](https://github.com/philiparthurmoore/Subtitles/commit/5b54263fcf82de6db9e7e0875a0a99974758a81f)).
+- **Extra:** Catalan (ca) language packs added (see [issue](https://github.com/philiparthurmoore/Subtitles/pull/11)).
+- **Extra:** Korean (ko_KR) language packs added (see [issue](https://github.com/philiparthurmoore/Subtitles/pull/10)).
+- **Extra:** Spanish (es_ES) language packs added (see [issue](https://github.com/philiparthurmoore/Subtitles/pull/11)).
+- **Extra:** Begin preparing plugin for better automated testing via [Travis CI](https://travis-ci.org/), [phpunit](https://github.com/sebastianbergmann/phpunit/), [WordPress Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards), and [CodeSniffer](http://pear.php.net/package/PHP_CodeSniffer/)
 
 ### [v1.0.1](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.1) (June 14th, 2014)
 
-- Bug Fix: Make sure that the plugin automatically works with `single_post_title` (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/2)).
-- Bug Fix: Ensure that special characters in post titles do not erroneously cause subtitles to be skipped during title filtering and checks (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/3)).
-- Bug Fix: Remove unnecessary ID checks against nav menus (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/4)).
-- Bug Fix: Resolve title output issues when [WordPress SEO by Yoast](https://wordpress.org/plugins/wordpress-seo/) breadcrumbs are used inside of [The Loop](http://codex.wordpress.org/The_Loop) (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/5)).
-- Extra: Vietnamese (vi_VN) language packs added.
-- Extra: German (de_DE) language packs added.
-- Extra: Finnish (fi) language packs added.
-- Extra: Italian (it_IT) language packs added.
-- Extra: Japanese (ja) language packs added.
+- **Bug Fix:** Make sure that the plugin automatically works with `single_post_title` (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/2)).
+- **Bug Fix:** Ensure that special characters in post titles do not erroneously cause subtitles to be skipped during title filtering and checks (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/3)).
+- **Bug Fix:** Remove unnecessary ID checks against nav menus (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/4)).
+- **Bug Fix:** Resolve title output issues when [WordPress SEO by Yoast](https://wordpress.org/plugins/wordpress-seo/) breadcrumbs are used inside of [The Loop](http://codex.wordpress.org/The_Loop) (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/5)).
+- **Extra:** Vietnamese (vi_VN) language packs added.
+- **Extra:** German (de_DE) language packs added.
+- **Extra:** Finnish (fi) language packs added.
+- **Extra:** Italian (it_IT) language packs added.
+- **Extra:** Japanese (ja) language packs added.
 
 ### [v1.0.0](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.0) (June 12th, 2014)
-- Initial Release ([Launch Announcement](https://philiparthurmoore.com/subtitles))
+- **Initial Release:** ([Launch Announcement](https://philiparthurmoore.com/subtitles))
 
 ## Screenshots
 
