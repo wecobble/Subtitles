@@ -692,7 +692,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 				)
 			);
 
-			$subtitle = $subtitle_markup[ 'before' ] . $subtitle . $subtitle_markup[ 'after' ];
+			$subtitle = $subtitle_markup['before'] . $subtitle . $subtitle_markup['after'];
 
 			/**
 			 * Put together the final title and subtitle set

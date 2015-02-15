@@ -89,7 +89,7 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 			 *
 			 * @since 1.0.0
 			 */
-			if ( version_compare( $GLOBALS[ 'wp_version' ], '4.1-alpha', '<' ) ) {
+			if ( version_compare( $GLOBALS['wp_version'], '4.1-alpha', '<' ) ) {
 				add_action( 'edit_form_after_title', array( &$this, 'build_subtitle_input' ) );
 			} else {
 				add_action( 'edit_form_before_permalink', array( &$this, 'build_subtitle_input' ) );

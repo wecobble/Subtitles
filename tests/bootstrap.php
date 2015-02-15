@@ -51,7 +51,7 @@ echo 'License: GNU General Public License v2 or later' . PHP_EOL . PHP_EOL;
  *
  * @since 1.0.2
  */
-define( 'SUBTITLES_PLUGIN_DIR', dirname( dirname( __FILE__ ) ) . '/'  );
+define( 'SUBTITLES_PLUGIN_DIR', dirname( dirname( __FILE__ ) ) . '/' );
 
 /**
  * Define Subtitles unit tests directory.
@@ -68,7 +68,7 @@ define( 'SUBTITLES_TESTS_DIR', dirname( __FILE__ ) ) . '/';
  *
  * @since 1.0.2
  */
-$GLOBALS[ 'wp_tests_options' ] = array(
+$GLOBALS['wp_tests_options'] = array(
 	'active_plugins' => array( basename( dirname( dirname( __FILE__ ) ) ) . '/subtitles.php' ),
 );
 
