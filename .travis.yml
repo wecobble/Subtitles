@@ -113,5 +113,3 @@ script:
 # @link http://docs.travis-ci.com/user/notifications/#Email-notifications
 notifications:
     email: false
-    slack:
-        secure: "af84yPHjI6Yk48Ea5ZvtYS2GJ3u+db+49/cYy/S4kwO3NaagvTt6XqHQdhZfXHdel2DJ6uS42/MEqYbZ2OR8Avj7jgRWGV6603itByyTHDlcJZ2U/jruHCW6LbipziBI60ipID2aDM4Bs+Pw8utfJu7I47ddcw2hYl1cBrkpZk0="
