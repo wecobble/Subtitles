@@ -7,6 +7,10 @@
 # Declare project language.
 language: php
 
+# Declare services
+services:
+    - mysql
+
 # Declare which versions of WordPress to test against.
 # Also declare whether or not to test in Multisite.
 env:
