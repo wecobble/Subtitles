@@ -62,8 +62,6 @@ before_script:
     - scripts/phpcs --config-set installed_paths ../wordpress-coding-standards
     # Hop into plugins directory.
     - cd $plugin_dir
-    # After CodeSniffer install you should refresh your path.
-    - phpenv rehash
 
 # Run test script commands.
 # Default is specific to project language.
