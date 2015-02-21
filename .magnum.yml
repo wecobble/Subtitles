@@ -44,6 +44,7 @@ before_script:
     # Set up Subtitles plugin information.
     - plugin_slug=$(basename $(pwd))
     - plugin_dir=$WP_DEVELOP_DIR/src/wp-content/plugins/$plugin_slug
+    - echo plugin_dir
     - cd ..
     - mv $plugin_slug $plugin_dir
     # Set up WordPress configuration.
