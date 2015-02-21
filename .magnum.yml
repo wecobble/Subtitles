@@ -1,16 +1,9 @@
 # Magnum CI (MIT License) configuration file for Subtitles WordPress Plugin
 # @link https://magnum-ci.com/
-
+#
 # For use with the Subtitles WordPress Plugin
 # @link https://github.com/philiparthurmoore/Subtitles
-
-# Declare project language.
-language: php
-
-# Declare services
-services:
-    - mysql
-
+#
 # Declare which versions of WordPress to test against.
 # Also declare whether or not to test in Multisite.
 env:
