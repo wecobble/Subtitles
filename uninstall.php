@@ -19,7 +19,7 @@
  * In the future I could see there being a need for people to be able to delete all of their subtitles
  * in one fell swoop, but right now I do not think that this is necessary.
  *
- * @since 1.0.0
+ * @since   1.0.0
  * @package Subtitles
  */
 

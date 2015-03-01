@@ -1,17 +1,17 @@
 <?php
 /**
  * Plugin Name: Subtitles
- * Plugin URI: http://wordpress.org/plugins/subtitles/
+ *  Plugin URI: http://wordpress.org/plugins/subtitles/
  * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
- * Author: Philip Arthur Moore
- * Author URI: https://philiparthurmoore.com/
- * Version: 2.0.1
+ *      Author: Philip Arthur Moore
+ *  Author URI: https://philiparthurmoore.com/
+ *     Version: 2.1.0
  * Text Domain: subtitles
  * Domain Path: /languages/
- * License: GNU General Public License v2 or later
+ *     License: GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Subtitles WordPress Plugin, Copyright 2014 Philip Arthur Moore <philip@pressbuild.com>,
+ * Subtitles WordPress Plugin, Copyright 2014-2015 Philip Arthur Moore <philip@pressbuild.com>,
  * distributed under the terms of the GNU General Public License v2 or later.
  *
  * Right now WordPress currently presents no easy way for web publishers to add
@@ -22,7 +22,7 @@
  * user-friendly. This simple, straightforward plugin aims to solve this issue.
  *
  * A note to plugin developers and theme makers: you may be wondering why I've taken
- * the time to document code that to seasoned vets seems obvious, for example explaining
+ * the time to document code that to seasoned vets may seem obvious, for example explaining
  * that functions inside of classes are called methods. The reason I've done this is primarily
  * because there was a time when looking at the following code would have made absolutely no
  * sense to me. At that time, I would have loved for there to have been robust inline documentation
@@ -61,11 +61,12 @@
  *    the World Wide Web Consortium (W3C); among them are spans, which work well for what we're trying
  *    to do with titles in WordPress. See the linked documentation for more information.
  *    @link http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#sub-head
- * 6. By default subtitles are available to both posts and pages. If you find that you'd also like to use
+ * 6. By default subtitles are available to posts, pages, and Jetpack portfolio projects. If you find that you'd also like to use
  *    them with your custom post types, then simply add post type support for subtitles, for example:
  *    `add_post_type_support( $post_type, 'subtitles' )`. Remember to do this within a function that's
  *    hooked to `init`. See the Codex for more information:
  *    @link http://codex.wordpress.org/Function_Reference/add_post_type_support
+ *    @link http://jetpack.me/
  *
  * One of the drawbacks of this approach, which I think is minor enough to proceed with the design of the plugin,
  * is that the $before and $after values in the_title() are unable to be filtered. What this means is that for
@@ -82,11 +83,11 @@
  * For WordPress PHP documentation standards, see the following link:
  * @link http://make.wordpress.org/core/handbook/inline-documentation-standards/php-documentation-standards/
  *
- * @package Subtitles
- * @author Philip Arthur Moore <philip@pressbuild.com>
- * @license URI: http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License v2 or later
- * @link http://wordpress.org/plugins/subtitles/
- * @copyright 2014 Philip Arthur Moore
+ * @package   Subtitles
+ * @author    Philip Arthur Moore <philip@pressbuild.com>
+ * @license   URI: http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License v2 or later
+ * @link      http://wordpress.org/plugins/subtitles/
+ * @copyright 2014-2015 Philip Arthur Moore
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -165,12 +166,12 @@ require plugin_dir_path( __FILE__ ) . 'public/includes/template-tags.php';
  * DOING_AJAX is defined. We'll also make sure that the admin class
  * only fires off when we're actually in the admin area of the site.
  *
- * @see is_admin()
+ * @see  add_action()
+ * @see  is_admin()
+ * @see  plugin_dir_path()
  * @link http://codex.wordpress.org/Function_Reference/is_admin
  * @link http://www.php.net//manual/en/function.require.php
- * @see plugin_dir_path()
  * @link http://codex.wordpress.org/Function_Reference/plugin_dir_path
- * @see add_action()
  * @link http://codex.wordpress.org/Function_Reference/add_action
  * @link http://codex.wordpress.org/Plugin_API/Action_Reference/plugins_loaded
  *

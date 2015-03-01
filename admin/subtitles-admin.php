@@ -104,7 +104,7 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 			 *
 			 * @since 1.0.0
 			 */
-			add_action( 'save_post',             array( &$this, 'update_subtitle_data' ), 10, 3 );
+			add_action( 'save_post', array( &$this, 'update_subtitle_data' ), 10, 3 );
 
 			/**
 			 * Enqueue backend scripts and styles.
@@ -165,8 +165,7 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 			wp_nonce_field(
 				basename( __FILE__ ), // $action, Action name
 				self::SUBTITLE_NONCE_NAME // $name, Nonce name
-			);
-			?>
+			); ?>
 
 			<div id="subtitlediv">
 				<div id="subtitlewrap">

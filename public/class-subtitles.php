@@ -44,7 +44,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		const VERSION = '2.0.1';
+		const VERSION = '2.1.0';
 
 		/**
 		 * Constant used when referencing the plugin in load text domain calls and other
@@ -141,7 +141,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			}
 
 			return self::$instance;
-		} // end method getinstance()
+		} // end method getinstance
 
 		/**
 		 * Declare constructor methods for the class Subtitles.
@@ -182,7 +182,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			 *
 			 * @since 1.0.0
 			 */
-			add_action( 'init',               array( &$this, 'add_subtitles_support' ) );
+			add_action( 'init', array( &$this, 'add_subtitles_support' ) );
 
 			/**
 			 * Make Subtitles available for translation.
@@ -192,7 +192,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			 *
 			 * @since 1.0.0
 			 */
-			add_action( 'init',               array( &$this, 'load_subtitles_textdomain' ) );
+			add_action( 'init', array( &$this, 'load_subtitles_textdomain' ) );
 
 			/**
 			 * Output front-end styles for Subtitles via wp_head
@@ -223,7 +223,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			 * @since 1.0.0
 			 */
 			if ( ! is_admin() ) { // Don't touch anything inside of the WordPress Dashboard, yet.
-				add_filter( 'the_title',           array( &$this, 'the_subtitle' ), 10, 2 );
+				add_filter( 'the_title', array( &$this, 'the_subtitle' ), 10, 2 );
 
 				/**
 				 * Let's also filter the dedicated function for single post titles
@@ -232,7 +232,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 				 *
 				 * @since 1.0.1
 				 */
-				add_filter( 'single_post_title',   array( &$this, 'the_subtitle' ), 10, 2 );
+				add_filter( 'single_post_title', array( &$this, 'the_subtitle' ), 10, 2 );
 
 				/**
 				 * Make sure that Subtitles plays nice with WordPress SEO plugin by Yoast
@@ -244,7 +244,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 				 */
 				add_filter( 'wp_seo_get_bc_title', array( &$this, 'plugin_compat_wordpress_seo' ) );
 			}
-		} // end method __construct()
+		} // end method __construct
 
 		/**
 		 * Make sure that Subtitles plays nice with WordPress SEO plugin by Yoast.
