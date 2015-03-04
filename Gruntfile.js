@@ -32,7 +32,8 @@ module.exports = function(grunt) {
 				},
 				src: [
 					'*.js',
-					'**/*.js'
+					'**/*.js',
+					'!node_modules/**'
 				]
 			}
 		},
