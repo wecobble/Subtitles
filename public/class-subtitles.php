@@ -203,6 +203,11 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			add_action( 'wp_head', array( &$this, 'subtitle_styling' ) );
 
 			/**
+			 * Include Subtitles in search results, in both themes and the admin Dashboard. 
+			 */
+			add_filter( 'pre_get_posts', array( &$this, 'search_subtitles' ) );
+
+			/**
 			 * Filter post titles to display subtitles properly.
 			 *
 			 * add_filter accepts:
@@ -245,6 +250,116 @@ if ( ! class_exists( 'Subtitles' ) ) {
 				add_filter( 'wp_seo_get_bc_title', array( &$this, 'plugin_compat_wordpress_seo' ) );
 			}
 		} // end method __construct
+
+		/**
+		 * Include Subtitles in search queries
+		 *
+		 * This function checks to see if the current query is a search query, 
+		 * and if it is then it adds additional query filters to check the 
+		 * subtitle field in addition to the post_title and post_content fields. 
+		 *
+		 * @link https://codex.wordpress.org/Plugin_API/Action_Reference/pre_get_posts
+		 * @link https://github.com/philiparthurmoore/Subtitles/issues/37
+		 */
+		public function search_subtitles( $query ) {
+
+			/**
+			 * Only apply our subtitle query filter if the current query is a search query
+			 */
+			if ( $query->is_search ) {
+
+				/**
+				 * Filter the query clauses directly
+				 *
+				 * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/posts_clauses
+				 */
+				add_filter( 'posts_clauses', array( $this, 'filter_mysql_clauses_for_search' ), 10, 2 );
+			}
+
+			/**
+			 * Make sure to return the query for further use by WordPress; 
+			 * No modifications have been made to the query object at this time. 
+			 */
+			return $query;
+		}
+
+		/**
+		 * Change the MySQL query clauses to include the Subtitles meta field
+		 *
+		 * This function conditionally applies some filters to the $clauses array in order
+		 * to check the Subtitles meta field. 
+		 *
+		 * Notes: 
+		 *   1. The subtitle field will not be searched if a Meta Query has also 
+		 *      been set by another plugin or theme. 
+		 *
+		 *   2. It would be preferable to avoid altering the query directly, however
+		 *      it is not currently possible in WordPress 4.2.2 to perform this type of 
+		 *      inclusive search query using the available Meta Query parameters.  
+		 *
+		 * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/posts_clauses
+		 * @link http://wordpress.stackexchange.com/questions/50305/how-to-extend-wp-query-to-include-custom-table-in-query#answer-50818
+		 * @link https://codex.wordpress.org/Class_Reference/WP_Query
+		 */
+		public function filter_mysql_clauses_for_search( $clauses, $query ) {
+
+			/**
+			 * Reference the $wpdb object because the names of the tables may change
+			 * in WP Multisite, or depending on how the WordPress installation is configured. 
+			 */
+			global $wpdb;
+
+			/**
+			 * Perform a regex replacement on the WHERE clause.
+			 *
+			 * 1. Perform a regex search for:
+			 *    wp_posts.post_title LIKE 'user_search_term'
+			 *
+			 * 2. If found, append an additional clause which looks something like this:
+			 *    OR ( wp_postmeta.meta_key = '_subtitle' AND wp_postmeta.meta_value LIKE 'user_search_term' )
+			 *
+			 * This change alters the MySQL query to check not only 
+			 * the post_title and post_content fields, but also
+			 * the postmeta field called '_subtitle'. If no match is
+			 * found, the query is unaltered. 
+			 */
+			$clauses['where'] = preg_replace(
+			    "/\(\s*$wpdb->posts.post_title\s+LIKE\s*(\'[^\']+\')\s*\)/",
+			    "($wpdb->posts.post_title LIKE $1) OR ( $wpdb->postmeta.meta_key = '".self::SUBTITLE_META_KEY."' AND $wpdb->postmeta.meta_value LIKE $1 )", 
+			    $clauses['where']
+			);
+
+			/**
+			 * Ensure that the query joins the postmeta table, since that is
+			 * where the Subtitle meta values are stored. 
+			 *
+			 * Only append our parameters if they do not already exist. 
+			 */
+			if ( false === strpos($clauses['join'], "$wpdb->postmeta") ) {
+				$clauses['join'] .= " LEFT JOIN $wpdb->postmeta ON ($wpdb->posts.ID = $wpdb->postmeta.post_id) ";
+			}
+
+			/**
+			 * Ensure that our results are grouped by Post ID;
+			 *
+			 * Only append our parameters if they do not already exist. 
+			 */
+			if ( false === strpos($clauses['groupby'], "$wpdb->posts.ID") ) {
+				$clauses['groupby'] .= " $wpdb->posts.ID ";
+			}
+
+			/**
+			 * Remove this filter so that it is not run again on other queries
+			 * that are not explicitly search queries. This filter will get re-added
+			 * on each search query, and then removed as soon as the filtering is complete. 
+			 */
+			remove_filter( 'posts_clauses', array( $this, 'filter_mysql_clauses_for_search' ), 10 );
+
+			/**
+			 * Return the modified array of clauses for use by WordPress
+			 */
+			return $clauses;
+		}
 
 		/**
 		 * Make sure that Subtitles plays nice with WordPress SEO plugin by Yoast.

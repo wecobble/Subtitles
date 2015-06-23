@@ -275,6 +275,18 @@ if ( function_exists( 'get_the_subtitle' ) ) {
 
 An ID isn't necessary for `get_the_subtitle`, but will work for retrieving subtitles from posts that aren't currently being viewed.
 
+---
+
+### Searching Subtitles ###
+
+The plugin will filter search queries to also check the subtitle field in addition to the `post_title` and `post_content` fields, both in the Admin Dashboard and front-end search function. If you wish to disable this functionality, you can do so in your plugin or themes setup file:
+
+```php
+if ( class_exists( 'Subtitles' ) &&  method_exists( 'Subtitles', 'search_subtitles' ) ) {
+    remove_action( 'pre_get_posts', array( Subtitles::getInstance(), 'search_subtitles' ) );
+}
+```
+
 ## Changelog
 
 All versions of _Subtitles_ can be found on the [Releases](https://github.com/philiparthurmoore/Subtitles/releases) page.
