@@ -525,7 +525,6 @@ if ( ! class_exists( 'Subtitles' ) ) {
 				 */
 				#comments .comments-title span.entry-subtitle {
 					display: none;
-					font-size: 1em;
 				}
 			</style><?php
 		} // end function subtitle_styling
