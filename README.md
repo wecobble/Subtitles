@@ -275,6 +275,8 @@ if ( function_exists( 'get_the_subtitle' ) ) {
 
 An ID isn't necessary for `get_the_subtitle`, but will work for retrieving subtitles from posts that aren't currently being viewed.
 
+---
+
 ### Modifying Allowed Tags ###
 
 By default _Subtitles_ supports both bold and italicized text. If you want more control over this, you can take advantage of the `subtitles_allowed_tags` filter.
