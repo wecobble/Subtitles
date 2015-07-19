@@ -275,6 +275,27 @@ if ( function_exists( 'get_the_subtitle' ) ) {
 
 An ID isn't necessary for `get_the_subtitle`, but will work for retrieving subtitles from posts that aren't currently being viewed.
 
+### Modifying Allowed Tags ###
+
+By default _Subtitles_ supports both bold and italicized text. If you want more control over this, you can take advantage of the `subtitles_allowed_tags` filter.
+
+```php
+function subtitles_mod_allowed_tags( $args ) {
+	$args = array(
+		'i' => array(), // italicized text
+		'em' => array(), // emphasized text
+		'strong' => array(), // strong text
+		'a' => array(
+			'href' => true, // links
+		),
+	);
+
+	return $args;
+} // end function subtitles_mod_allowed_tags
+add_filter( 'subtitles_allowed_tags', 'subtitles_mod_allowed_tags' );
+```
+Proceed with caution here. In some cases getting too cavalier with this may introduce HTML issues into your site.
+
 ## Changelog
 
 All versions of _Subtitles_ can be found on the [Releases](https://github.com/philiparthurmoore/Subtitles/releases) page.
@@ -282,6 +303,7 @@ All versions of _Subtitles_ can be found on the [Releases](https://github.com/ph
 ### [v2.1.0](https://github.com/philiparthurmoore/Subtitles/releases/tag/v2.0.2) (TBD)
 
 - **Extra:** Add a Subtitle column into the Posts and Pages admin screens.
+- **Extra:** We have added in a way for developers to allow more tags in subtitles input.
 - **Patch:** Remove font sizing from hidden entry subtitle in comments area (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/46])).
 
 ### [v2.0.1](https://github.com/philiparthurmoore/Subtitles/releases/tag/v2.0.1) (November 6th, 2014)

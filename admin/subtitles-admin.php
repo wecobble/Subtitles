@@ -232,18 +232,22 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 			 *
 			 * Always remember to validate on both input and output. We're using wp_kses
 			 * here, and only allowing users to input italicized and bold text in their
-			 * subtitles. This may change at a later time, but I believe that in this case,
-			 * less is more, and users should only be able to enter plain text, or very simple
-			 * bold and italic markup for their subtitles.
+			 * subtitles.
 			 *
 			 * @link http://codex.wordpress.org/Function_Reference/wp_kses
 			 * @since 1.0.0
+			 *
+			 * @since 2.1.0 We have added in a way for developers to allow more tags in subtitles input.
 			 */
 			$subtitles_allowed_tags = array(
 				'i' => array(), // italicized text
 				'em' => array(), // emphasized text
 				'strong' => array(), // strong text
 			);
+			/**
+			 * @since 2.1.0 We have added in a way for developers to allow more tags in subtitles input.
+			 */
+			$subtitles_allowed_tags = apply_filters( 'subtitles_allowed_tags', $subtitles_allowed_tags );
 			// grab the subtitles meta key
 			$subtitle_meta_key = (string) self::SUBTITLE_META_KEY;
 			// If a new subtitle has been posted, then use it; otherwise assign an empty value to the subtitle
