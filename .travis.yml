@@ -8,6 +8,10 @@
 # @link http://about.travis-ci.org/docs/user/languages/php/
 language: php
 
+# Ditch sudo and use containers.
+# http://docs.travis-ci.com/user/migrating-from-legacy/?utm_source=legacy-notice&utm_medium=banner&utm_campaign=legacy-upgrade
+sudo: false
+
 # Declare versions of PHP to use. Use one decimal max.
 php:
     # aliased to a recent 5.5.x version
