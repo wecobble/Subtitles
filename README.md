@@ -282,6 +282,7 @@ All versions of _Subtitles_ can be found on the [Releases](https://github.com/ph
 ### [v2.1.0](https://github.com/philiparthurmoore/Subtitles/releases/tag/v2.0.2) (TBD)
 
 - **Extra:** Add a Subtitle column into the Posts and Pages admin screens.
+- **Patch:** Remove font sizing from hidden entry subtitle in comments area (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/46])).
 
 ### [v2.0.1](https://github.com/philiparthurmoore/Subtitles/releases/tag/v2.0.1) (November 6th, 2014)
 
