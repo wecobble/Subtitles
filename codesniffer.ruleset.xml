@@ -12,5 +12,9 @@
 		<exclude name="Squiz.Commenting.FileComment.Missing" />
 		<exclude name="Squiz.Commenting.FileComment.WrongStyle" />
 		<exclude name="Generic.Files.EndFileNewline.NotFound" />
+		<exclude name="Generic.Commenting.DocComment.MissingShort" />
+		<exclude name="Squiz.Commenting.ClassComment.SpacingBefore" />
+		<exclude name="Squiz.Commenting.VariableComment.MissingVar" />
+		<exclude name="Squiz.Commenting.FunctionComment.Missing" />
 	</rule>
 </ruleset>
