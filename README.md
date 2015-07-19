@@ -298,6 +298,8 @@ add_filter( 'subtitles_allowed_tags', 'subtitles_mod_allowed_tags' );
 ```
 Proceed with caution here. In some cases getting too cavalier with this may introduce HTML issues into your site.
 
+---
+
 ## Changelog
 
 All versions of _Subtitles_ can be found on the [Releases](https://github.com/philiparthurmoore/Subtitles/releases) page.
