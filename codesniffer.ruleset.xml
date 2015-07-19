@@ -5,6 +5,10 @@
 
 	<!-- Include the WordPress ruleset, with exclusions. -->
 	<rule ref="WordPress">
-
+		<exclude name="Squiz.Commenting.InlineComment.NotCapital" />
+		<exclude name="Squiz.Commenting.InlineComment.InvalidEndChar" />
+		<exclude name="Squiz.Commenting.BlockComment.NoCapital" />
+		<exclude name="Squiz.Commenting.BlockComment" />
+		<exclude name="Squiz.Commenting.FileComment.Missing" />
 	</rule>
 </ruleset>

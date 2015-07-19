@@ -26,12 +26,3 @@
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) { // if uninstall hasn't been called, then bail
 	exit;
 }
-
-/*
-global $wpdb;
-
-if ( is_multisite() ) {
-	// do these things when multisite is in use
-} else {
-	// do these things when multisite isn't in use
-}*/
