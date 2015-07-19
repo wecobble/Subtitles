@@ -308,6 +308,7 @@ All versions of _Subtitles_ can be found on the [Releases](https://github.com/ph
 
 - **Extra:** Add a Subtitle column into the Posts and Pages admin screens.
 - **Extra:** We have added in a way for developers to allow more tags in subtitles input.
+- **Extra:** Update plugin POT.
 - **Patch:** Remove font sizing from hidden entry subtitle in comments area (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/46])).
 
 ### [v2.0.1](https://github.com/philiparthurmoore/Subtitles/releases/tag/v2.0.1) (November 6th, 2014)
