@@ -729,7 +729,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			$post_id = ( isset( $post ) ) ? $post->ID : 0; // post ID should always be a non-negative integer
 			$subtitle = (string) html_entity_decode( wp_unslash( esc_html( get_post_meta( $post_id, self::SUBTITLE_META_KEY, true ) ) ), ENT_QUOTES );
 
-			if ( '' == $subtitle ) {
+			if ( '' === $subtitle ) {
 				return $subtitle;
 			}
 

@@ -115,6 +115,16 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 			 * @since 1.0.0
 			 */
 			add_action( 'admin_enqueue_scripts', array( &$this, 'subtitle_admin_scripts' ) );
+
+			/**
+			 * Add subtitles into post, page, and custom post type columns in the Dashboard.
+			 *
+			 * @since 2.1.0
+			 */
+			add_action( 'manage_posts_columns', array( &$this, 'build_subtitles_column_head' ), 10, 2 );
+			add_action( 'manage_posts_custom_column', array( &$this, 'build_subtitles_column_content' ), 10, 2 );
+			add_action( 'manage_pages_columns', array( &$this, 'build_subtitles_column_head' ) );
+			add_action( 'manage_pages_custom_column', array( &$this, 'build_subtitles_column_content' ), 10, 2 );
 		} // end method __construct()
 
 		/**
@@ -347,5 +357,47 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 			 */
 			wp_enqueue_script( self::PLUGIN_SLUG . '-admin-scripts', plugins_url( 'assets/js/subtitles.js' , __FILE__ ), array( 'jquery' ), self::VERSION, true );
 		} // end subtitle_admin_scripts()
+
+		/**
+		 * Build Subtitle column headers for post, pages, and custom post types.
+		 *
+		 * @see    function esc_html__
+		 * @see    function is_admin
+		 * @see    function post_type_supports
+		 * @since  2.1.0
+		 * @access public
+		 */
+		public function build_subtitles_column_head( $posts_columns, $post_type = 'page' ) {
+			if ( ! is_admin() ) {
+				return;
+			}
+
+			$post_type_support = post_type_supports( $post_type, self::SUBTITLE_FEATURE_SUPPORT );
+			if ( $post_type_support ) {
+				$posts_columns['subtitle'] = esc_html__( 'Subtitle', 'subtitles' );
+			}
+
+			return $posts_columns;
+		} // end function build_subtitles_column_head
+
+		/**
+		 * Build Subtitle column content for post, pages, and custom post types.
+		 *
+		 * @see    function is_admin
+		 * @see    function get_the_subtitle
+		 * @since  2.1.0
+		 * @access public
+		 */
+		public function build_subtitles_column_content( $column_name, $post_id ) {
+			if ( ! is_admin() || 'subtitle' !== $column_name ) {
+				return;
+			}
+
+			$subtitle = get_the_subtitle( $post_id );
+
+			if ( ! empty( $subtitle ) ) {
+				echo $subtitle; // WPCS: XSS OK
+			}
+		} // end function build_subtitles_column_content
 	} // end class Subtitles_Admin
 } // end class Subtitles_Admin check
