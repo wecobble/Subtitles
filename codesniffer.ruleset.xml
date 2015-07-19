@@ -10,5 +10,7 @@
 		<exclude name="Squiz.Commenting.BlockComment.NoCapital" />
 		<exclude name="Squiz.Commenting.BlockComment" />
 		<exclude name="Squiz.Commenting.FileComment.Missing" />
+		<exclude name="Squiz.Commenting.FileComment.WrongStyle" />
+		<exclude name="Generic.Files.EndFileNewline.NotFound" />
 	</rule>
 </ruleset>
