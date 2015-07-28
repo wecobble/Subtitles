@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Subtitles WordPress Plugin v1.0.0\n"
-"POT-Creation-Date: 2014-06-13 09:19+0100\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/plugins/subtitles/\n"
+"POT-Creation-Date: 2015-07-28 14:31:41+00:00\n"
 "PO-Revision-Date: 2014-06-13 16:45+0700\n"
 "Last-Translator: Philip Arthur Moore <philip@pressbuild.com>\n"
 "Language-Team: \n"
@@ -21,6 +22,16 @@ msgstr ""
 "X-Poedit-SearchPath-2: ../admin\n"
 "X-Poedit-SearchPath-3: ../public\n"
 
-#: admin/subtitles-admin.php:148
+#: admin/subtitles-admin.php:183
 msgid "Enter subtitle here"
 msgstr "Inserisci qui il sottotitolo"
+
+#: admin/subtitles-admin.php:377
+msgid "Subtitle"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Easily add subtitles into your WordPress posts, pages, custom post types, "
+"and themes."
+msgstr ""

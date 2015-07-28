@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2014-06-12 15:38+0700\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/plugins/subtitles/\n"
+"POT-Creation-Date: 2015-07-28 14:31:41+00:00\n"
 "PO-Revision-Date: 2014-06-16 13:00+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -13,6 +14,16 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: admin/subtitles-admin.php:148
+#: admin/subtitles-admin.php:183
 msgid "Enter subtitle here"
 msgstr "부제를 여기에 입력하세요"
+
+#: admin/subtitles-admin.php:377
+msgid "Subtitle"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Easily add subtitles into your WordPress posts, pages, custom post types, "
+"and themes."
+msgstr ""
