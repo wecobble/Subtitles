@@ -142,7 +142,6 @@ span.entry-subtitle {
  */
 #comments .comments-title span.entry-subtitle {
 	display: none;
-	font-size: 1em;
 }
 ```
 
