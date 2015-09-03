@@ -1,6 +1,6 @@
 # Subtitles WordPress Plugin
 
-![Travis CI Build Status](https://travis-ci.org/philiparthurmoore/Subtitles.svg?branch=master)
+![Travis CI Build Status](https://travis-ci.org/philiparthurmoore/Subtitles.svg?branch=master) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 ![Subtitles in action](https://i.cloudup.com/YoFzxUCM2S.png)
 
