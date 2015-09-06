@@ -60,7 +60,7 @@
 				var editor, $textarea;
 
 				if ( event.keyCode === 9 && ! event.ctrlKey && ! event.altKey && ! event.shiftKey ) {
-					editor = typeof tinymce != 'undefined' && tinymce.get( 'content' );
+					editor = typeof tinymce !== 'undefined' && tinymce.get( 'content' );
 					$textarea = $( '#content' );
 
 					if ( editor && ! editor.isHidden() ) {

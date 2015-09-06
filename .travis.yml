@@ -107,10 +107,10 @@ script:
     - phpunit --configuration phpunit.config.xml
     # Search for PHP syntax errors.
     - find . \( -name '*.php' \) -exec php -lf {} \;
-    # Run the theme through JSHint
+    # Run the plugin through JSHint
     - jshint .
-    # Run the theme through JavaScript Code Style checker
-    - jscs --preset wordpress $( find . -name '*.js' ! -name 'html5.js' )
+    # Run the plugin through JavaScript Code Style checker
+    - jscs --preset wordpress $( find . -name '*.js' ! -name 'html5.js' ! -name 'Gruntfile.js' )
     # WordPress Coding Standards
     # @link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards
     # @link http://pear.php.net/package/PHP_CodeSniffer/
