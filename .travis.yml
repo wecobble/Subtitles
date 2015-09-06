@@ -94,9 +94,6 @@ before_script:
     - npm install -g jscs
     # Install JSHint, a JavaScript Code Quality Tool
     - npm install -g jshint
-    # Get the WordPress Core JSHint config file.
-    - wget https://develop.svn.wordpress.org/trunk/.jshintrc
-
 
 # Run test script commands.
 # Default is specific to project language.
