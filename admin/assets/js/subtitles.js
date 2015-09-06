@@ -23,24 +23,24 @@
 		 *
 		 * @since 1.0.0
 		 */
-		$( '#subtitle' ).each( function() { // cribbed from WordPress' dashboard.js
-			var input  = $( this ), // subtitle input
-				prompt = $( '#' + this.id + '-prompt-text' ); // the subtitle label
+		$( '#subtitle' ).each( function() { // Cribbed from WordPress' dashboard.js
+			var input  = $( this ), // Subtitle input
+				prompt = $( '#' + this.id + '-prompt-text' ); // The subtitle label
 
-			if ( '' === this.value ) { // if the input is blank on page load then show helper text
+			if ( '' === this.value ) { // If the input is blank on page load then show helper text.
 				prompt.removeClass( 'screen-reader-text' );
 			}
 
-			prompt.click( function() { // hide the helper text when the subtitle input label is clicked on
+			prompt.click( function() { // Hide the helper text when the subtitle input label is clicked on.
 				$( this ).addClass( 'screen-reader-text' );
 				input.focus();
 			} );
 
-			input.focus( function() { // hide the helper text when the subtitle input is clicked on
+			input.focus( function() { // Hide the helper text when the subtitle input is clicked on.
 				prompt.addClass( 'screen-reader-text' );
 			});
 
-			input.blur( function() { // when input has lost focus and it's empty show helper text
+			input.blur( function() { // When input has lost focus and it's empty show helper text.
 				if ( '' === this.value ) {
 					prompt.removeClass( 'screen-reader-text' );
 				}
