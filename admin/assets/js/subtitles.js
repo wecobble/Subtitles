@@ -3,7 +3,7 @@
  *
  * @since 1.0.0
  */
-(function( $, undefined ){
+(function( $, undefined ) {
 	/**
 	 * Presentational JS which fires on DOM load
 	 *
@@ -60,7 +60,7 @@
 				var editor, $textarea;
 
 				if ( 9 === event.keyCode && ! event.ctrlKey && ! event.altKey && ! event.shiftKey ) {
-					editor = typeof tinymce !== 'undefined' && tinymce.get( 'content' );
+					editor = 'undefined' !== typeof tinymce && tinymce.get( 'content' );
 					$textarea = $( '#content' );
 
 					if ( editor && ! editor.isHidden() ) {

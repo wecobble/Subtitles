@@ -10,9 +10,7 @@
 	"quotmark": "single",
 	"undef": false,
 	"unused": true,
-
 	"browser": true,
-
 	"globals": {
 		"_": false,
 		"Backbone": false,
