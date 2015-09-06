@@ -48,7 +48,7 @@
 
 			// Tab from the title to the subtitle, rather than the post content.
 			$( '#title' ).on( 'keydown', function( event ) {
-				if ( event.keyCode === 9 && ! event.ctrlKey && ! event.altKey && ! event.shiftKey ) {
+				if ( 9 === event.keyCode && ! event.ctrlKey && ! event.altKey && ! event.shiftKey ) {
 					$( '#subtitle' ).focus();
 
 					event.preventDefault();
@@ -59,7 +59,7 @@
 			$( '#subtitle' ).on( 'keydown.editor-focus', function( event ) {
 				var editor, $textarea;
 
-				if ( event.keyCode === 9 && ! event.ctrlKey && ! event.altKey && ! event.shiftKey ) {
+				if ( 9 === event.keyCode && ! event.ctrlKey && ! event.altKey && ! event.shiftKey ) {
 					editor = typeof tinymce !== 'undefined' && tinymce.get( 'content' );
 					$textarea = $( '#content' );
 
