@@ -89,7 +89,7 @@ if ( false !== getenv( 'WP_DEVELOP_DIR' ) ) {
 	require getenv( 'WP_DEVELOP_DIR' ) . '/tests/phpunit/includes/bootstrap.php';
 } else {
 	// functions used before loading WordPress
-	require '../../../../tests/phpunit/includes/functions.php';
+	require '../../../../wordpress-develop/tests/phpunit/includes/functions.php';
 	// Installs WordPress for running the tests and loads WordPress and the test libraries
-	require '../../../../tests/phpunit/includes/bootstrap.php';
+	require '../../../../wordpress-develop/tests/phpunit/includes/bootstrap.php';
 }

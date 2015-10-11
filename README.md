@@ -305,6 +305,8 @@ All versions of _Subtitles_ can be found on the [Releases](https://github.com/ph
 
 ### [v2.1.1](#) (TBD)
 
+- **Patch:** Transfer ownership of plugin to [Professional Themes](https://professionalthemes.nyc/).
+
 ### [v2.1.0](https://github.com/philiparthurmoore/Subtitles/releases/tag/v2.1.0) (July 19th, 2015)
 
 - **Extra:** Add a Subtitle column into the Posts and Pages admin screens.
