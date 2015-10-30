@@ -42,7 +42,7 @@ if ( function_exists( 'xdebug_disable' ) ) {
  * @since 1.0.2
  */
 echo 'Subtitles WordPress Plugin Unit Testing Suite' . PHP_EOL;
-echo 'Author: Philip Arthur Moore' . PHP_EOL;
+echo 'Author: Professional Themes' . PHP_EOL;
 echo 'License: GNU General Public License v2 or later' . PHP_EOL . PHP_EOL;
 
 /**

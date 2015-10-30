@@ -2,8 +2,8 @@
   "name": "subtitles",
   "homepage": "https://wordpress.org/plugins/subtitles/",
   "author": {
-    "name": "Philip Arthur Moore",
-    "url": "http://philiparthurmoore.com"
+    "name": "Professional Themes",
+    "url": "https://professionalthemes.nyc/"
   },
   "description": "Easily add subtitles into your WordPress posts, pages, custom post types, and themes.",
   "version": "2.1.1",
@@ -23,10 +23,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:philiparthurmoore/Subtitles.git"
+    "url": "git@github.com:professionalthemes/Subtitles.git"
   },
   "bugs": {
-    "url": "https://github.com/philiparthurmoore/Subtitles/issues"
+    "url": "https://github.com/professionalthemes/Subtitles/issues"
   },
   "private": true,
   "dependencies": {
