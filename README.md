@@ -303,8 +303,9 @@ Proceed with caution here. In some cases getting too cavalier with this may intr
 
 All versions of _Subtitles_ can be found on the [Releases](https://github.com/professionalthemes/Subtitles/releases) page.
 
-### [v2.1.1](#) (TBD)
+### [v2.1.1](https://github.com/professionalthemes/Subtitles/releases/tag/v2.1.1) (December 9th, 2015)
 
+- **Bug Fix:** Remove redundant htmlspecialchars from admin input (see [issue](https://github.com/professionalthemes/Subtitles/issues/66])).
 - **Patch:** Transfer ownership of plugin to [Professional Themes](https://professionalthemes.nyc/).
 
 ### [v2.1.0](https://github.com/professionalthemes/Subtitles/releases/tag/v2.1.0) (July 19th, 2015)
