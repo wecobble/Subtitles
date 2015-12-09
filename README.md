@@ -208,6 +208,20 @@ I do not suggest using headings tags for subtitles.
 
 ---
 
+### Displaying _Subtitles_ in RSS Feeds ###
+
+By default subtitles do not show in RSS feeds. If you'd like to show them then the following snippet should help:
+
+```php
+/**
+ * Show subtitles in RSS feeds.
+ */
+function display_subtitles_in_rss_feeds() {
+	return false;
+} // end function display_subtitles_in_rss_feeds
+add_filter( 'subtitles_is_feed', 'display_subtitles_in_rss_feeds' );
+```
+
 ### Modifying Supported _Subtitles_ Views ###
 
 By default, subtitles appear on most views throughout a site. This includes single post views, single page views, archive views, and search results pages.
