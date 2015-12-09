@@ -307,6 +307,7 @@ All versions of _Subtitles_ can be found on the [Releases](https://github.com/pr
 
 - **Bug Fix:** Remove redundant htmlspecialchars from admin input (see [issue](https://github.com/professionalthemes/Subtitles/issues/66])).
 - **Patch:** Transfer ownership of plugin to [Professional Themes](https://professionalthemes.nyc/).
+- **Patch:** Give developers the option to show subtitles in RSS feeds (see [issue](https://github.com/professionalthemes/Subtitles/issues/61)).
 - **Extra:** Lithuanian (lt_LT) language packs added.
 
 ### [v2.1.0](https://github.com/professionalthemes/Subtitles/releases/tag/v2.1.0) (July 19th, 2015)

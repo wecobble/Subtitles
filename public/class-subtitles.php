@@ -565,11 +565,13 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			}
 
 			/**
-			 * Do not show subtitles in RSS feeds.
+			 * Do not show subtitles in RSS feeds, but give devs. the option
+			 * to turn this off.
 			 *
 			 * @since 2.0.1
 			 */
-			if ( is_feed() ) {
+			$is_feed = apply_filters( 'subtitles_is_feed', is_feed() );
+			if ( $is_feed ) {
 				return $title;
 			}
 
