@@ -222,6 +222,8 @@ function display_subtitles_in_rss_feeds() {
 add_filter( 'subtitles_is_feed', 'display_subtitles_in_rss_feeds' );
 ```
 
+---
+
 ### Modifying Supported _Subtitles_ Views ###
 
 By default, subtitles appear on most views throughout a site. This includes single post views, single page views, archive views, and search results pages.
