@@ -3,15 +3,15 @@
  * Plugin Name: Subtitles
  *  Plugin URI: http://wordpress.org/plugins/subtitles/
  * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
- *      Author: Philip Arthur Moore
- *  Author URI: https://philiparthurmoore.com/
- *     Version: 2.1.0
+ *      Author: Professional Themes
+ *  Author URI: https://professionalthemes.nyc/
+ *     Version: 2.1.1
  * Text Domain: subtitles
  * Domain Path: /languages/
  *     License: GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Subtitles WordPress Plugin, Copyright 2014-2015 Philip Arthur Moore <philip@pressbuild.com>,
+ * Subtitles WordPress Plugin, Copyright 2014-2015 Professional Themes <mail@professionalthemes.nyc>,
  * distributed under the terms of the GNU General Public License v2 or later.
  *
  * Right now WordPress currently presents no easy way for web publishers to add
@@ -78,16 +78,16 @@
  * and using one of the helper template tags that have been shipped with the plugin.
  *
  * Bug reports and contributions in the form of patches are both welcomed and very much appreciated.
- * @link https://github.com/philiparthurmoore/Subtitles
+ * @link https://github.com/professionalthemes/Subtitles
  *
  * For WordPress PHP documentation standards, see the following link:
  * @link http://make.wordpress.org/core/handbook/inline-documentation-standards/php-documentation-standards/
  *
  * @package   Subtitles
- * @author    Philip Arthur Moore <philip@pressbuild.com>
+ * @author    Professional Themes <mail@professionalthemes.nyc>
  * @license   URI: http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License v2 or later
  * @link      http://wordpress.org/plugins/subtitles/
- * @copyright 2014-2015 Philip Arthur Moore
+ * @copyright 2014-2015 Professional Themes
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

@@ -42,7 +42,7 @@ if ( function_exists( 'xdebug_disable' ) ) {
  * @since 1.0.2
  */
 echo 'Subtitles WordPress Plugin Unit Testing Suite' . PHP_EOL;
-echo 'Author: Philip Arthur Moore' . PHP_EOL;
+echo 'Author: Professional Themes' . PHP_EOL;
 echo 'License: GNU General Public License v2 or later' . PHP_EOL . PHP_EOL;
 
 /**
@@ -89,7 +89,7 @@ if ( false !== getenv( 'WP_DEVELOP_DIR' ) ) {
 	require getenv( 'WP_DEVELOP_DIR' ) . '/tests/phpunit/includes/bootstrap.php';
 } else {
 	// functions used before loading WordPress
-	require '../../../../tests/phpunit/includes/functions.php';
+	require '../../../../wordpress-develop/tests/phpunit/includes/functions.php';
 	// Installs WordPress for running the tests and loads WordPress and the test libraries
-	require '../../../../tests/phpunit/includes/bootstrap.php';
+	require '../../../../wordpress-develop/tests/phpunit/includes/bootstrap.php';
 }

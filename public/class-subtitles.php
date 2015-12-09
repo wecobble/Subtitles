@@ -44,7 +44,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		const VERSION = '2.1.0';
+		const VERSION = '2.1.1';
 
 		/**
 		 * Constant used when referencing the plugin in load text domain calls and other
@@ -228,7 +228,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 				/**
 				 * Let's also filter the dedicated function for single post titles
 				 *
-				 * @link https://github.com/philiparthurmoore/Subtitles/issues/2
+				 * @link https://github.com/professionalthemes/Subtitles/issues/2
 				 *
 				 * @since 1.0.1
 				 */
@@ -238,7 +238,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 				 * Make sure that Subtitles plays nice with WordPress SEO plugin by Yoast
 				 *
 				 * @link https://wordpress.org/plugins/wordpress-seo/
-				 * @link https://github.com/philiparthurmoore/Subtitles/issues/5
+				 * @link https://github.com/professionalthemes/Subtitles/issues/5
 				 *
 				 * @since 1.0.1
 				 */
@@ -256,7 +256,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		 * and make sure that subtitles isn't included in any of the breadcrumb titles.
 		 *
 		 * @link https://wordpress.org/plugins/wordpress-seo/
-		 * @link https://github.com/philiparthurmoore/Subtitles/issues/5
+		 * @link https://github.com/professionalthemes/Subtitles/issues/5
 		 * @link http://us1.php.net//manual/en/function.strlen.php
 		 * @see get_the_subtitle()
 		 *
@@ -498,9 +498,9 @@ if ( ! class_exists( 'Subtitles' ) ) {
 				 * Plugin Name: Subtitles
 				 * Plugin URI: http://wordpress.org/plugins/subtitles/
 				 * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
-				 * Author: Philip Arthur Moore
-				 * Author URI: https://philiparthurmoore.com/
-				 * Version: 2.1.0
+				 * Author: Professional Themes
+				 * Author URI: https://professionalthemes.nyc/
+				 * Version: 2.1.1
 				 * License: GNU General Public License v2 or later
 				 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 				 */
@@ -546,7 +546,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			 * Check if $post is set. There's a chance that this can
 			 * be NULL on search results pages with zero results.
 			 *
-			 * @link https://github.com/philiparthurmoore/Subtitles/issues/12
+			 * @link https://github.com/professionalthemes/Subtitles/issues/12
 			 *
 			 * @since 1.0.2
 			 */
@@ -565,11 +565,13 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			}
 
 			/**
-			 * Do not show subtitles in RSS feeds.
+			 * Do not show subtitles in RSS feeds, but give devs. the option
+			 * to turn this off.
 			 *
 			 * @since 2.0.1
 			 */
-			if ( is_feed() ) {
+			$is_feed = apply_filters( 'subtitles_is_feed', is_feed() );
+			if ( $is_feed ) {
 				return $title;
 			}
 

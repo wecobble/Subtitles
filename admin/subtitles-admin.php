@@ -182,7 +182,7 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 					<label class="screen-reader-text" id="subtitle-prompt-text" for="<?php echo esc_attr( self::SUBTITLE_META_KEY ); ?>">
 						<?php echo esc_html( apply_filters( 'enter_subtitle_here', __( 'Enter subtitle here', 'subtitles' ), $post ) ); ?>
 					</label><!-- #subtitle-prompt-text -->
-					<input type="text" name="<?php echo esc_attr( self::SUBTITLE_META_KEY ); ?>" size="30" value="<?php echo esc_attr( htmlspecialchars( $subtitle ) ); ?>" id="subtitle" autocomplete="off" />
+					<input type="text" name="<?php echo esc_attr( self::SUBTITLE_META_KEY ); ?>" size="30" value="<?php echo esc_attr( $subtitle ); ?>" id="subtitle" autocomplete="off" />
 				</div><!-- #subtitlewrap -->
 			</div><!-- #subtitlediv --><?php
 

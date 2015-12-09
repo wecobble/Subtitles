@@ -1,6 +1,6 @@
 # Subtitles WordPress Plugin
 
-![Travis CI Build Status](https://travis-ci.org/philiparthurmoore/Subtitles.svg?branch=master)
+![Travis CI Build Status](https://travis-ci.org/professionalthemes/Subtitles.svg?branch=master) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 ![Subtitles in action](https://i.cloudup.com/YoFzxUCM2S.png)
 
@@ -8,9 +8,9 @@ Add subtitles into your WordPress posts, pages, custom post types, and themes. N
 
 Right now WordPress currently presents no easy way for web publishers to add subtitles into their posts, pages, and other custom post types. This leaves users and developers in a bit of a quandary, trying to figure out how best to present subtitles in a beautiful and sensible way. Post [excerpts](http://codex.wordpress.org/Function_Reference/the_excerpt) are a very poor choice for subtitles and the only available option outside of [custom fields](http://codex.wordpress.org/Custom_Fields), but custom fields aren't entirely self-explanatory or user-friendly. This simple, straightforward plugin aims to solve this issue.
 
-Simply download _Subtitles_, activate it, and begin adding subtitles into your posts and pages today. For more advanced usage of the plugin, please see the [Frequently Asked Questions](https://github.com/philiparthurmoore/Subtitles/blob/master/README.md#frequently-asked-questions).
+Simply download _Subtitles_, activate it, and begin adding subtitles into your posts and pages today. For more advanced usage of the plugin, please see the [Frequently Asked Questions](https://github.com/professionalthemes/Subtitles/blob/master/README.md#frequently-asked-questions).
 
-If you like _Subtitles_, [thank me with coffee](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2XTWCMPJ3NCYG) :coffee:. If you find it buggy, [tell me on GitHub](https://github.com/philiparthurmoore/Subtitles/issues) :beetle:. And if you have a cool example of how you're using _Subtitles_ on your website, let me know on [Twitter](https://twitter.com/philip_arthur) :bird:.
+If you like _Subtitles_, [thank me with coffee](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2XTWCMPJ3NCYG) :coffee:. If you find it buggy, [tell me on GitHub](https://github.com/professionalthemes/Subtitles/issues) :beetle:. And if you have a cool example of how you're using _Subtitles_ on your website, let me know on [Twitter](https://twitter.com/philip_arthur) :bird:.
 
 ## Installation
 
@@ -24,7 +24,7 @@ What follows are instructions on how to install the plugin and get it working.
 
 1. Navigate to *Plugins → Add New* from within the WordPress Dashboard.
 2. Search for `subtitles`.
-3. Click **Install Now** on *Subtitles* by Philip Arthur Moore.
+3. Click **Install Now** on *Subtitles* by Professional Themes.
 4. Activate the plugin.
 
 ### Uploading in WordPress Dashboard ###
@@ -70,9 +70,9 @@ There are two primary issues that may cause users to think that _Subtitles_ does
 
 #### Subtitles Don't Show Up On My Site!
 
-Subtitles relies on two things to work properly: 1) `the_title` being present in your theme and 2) the [WordPress Loop](http://codex.wordpress.org/The_Loop). This plugin works by automatically filtering all appropriate post titles so that you are not put in the position of needing to open your theme files manually and using the [custom template tags](https://github.com/philiparthurmoore/Subtitles#using-template-tags) that are available in this plugin.
+Subtitles relies on two things to work properly: 1) `the_title` being present in your theme and 2) the [WordPress Loop](http://codex.wordpress.org/The_Loop). This plugin works by automatically filtering all appropriate post titles so that you are not put in the position of needing to open your theme files manually and using the [custom template tags](https://github.com/professionalthemes/Subtitles#using-template-tags) that are available in this plugin.
 
-Some themes use titles outside of the standard WordPress Loop, which means that _Subtitles_ won't touch those. If you would like to use subtitles in a non-standard area of your site, outside of the Loop, then you can either change the views that are [supported by the plugin](https://github.com/philiparthurmoore/Subtitles#modifying-supported-subtitles-views) or manually use the template tags that are available to you in this plugin.
+Some themes use titles outside of the standard WordPress Loop, which means that _Subtitles_ won't touch those. If you would like to use subtitles in a non-standard area of your site, outside of the Loop, then you can either change the views that are [supported by the plugin](https://github.com/professionalthemes/Subtitles#modifying-supported-subtitles-views) or manually use the template tags that are available to you in this plugin.
 
 The reason this approach has been taken is because if titles outside of the Loop were touched so liberally, you would end up seeing subtitles in places on your site that you wouldn't want them, like in sidebars, navigation menus, and admin screens.
 
@@ -80,13 +80,13 @@ The reason this approach has been taken is because if titles outside of the Loop
 
 I can almost guarantee that the reason this is happening is because your theme developer is using either `the_title` or `get_the_title` in places where they should not be used. This is a theme bug, not a plugin bug. When titles are used as attributes, the appropriate template tag to use is `the_title_attribute`, never `the_title`.
 
-Please see [these long threads](https://github.com/philiparthurmoore/Subtitles/issues?q=the_title_attribute) as examples of what happens when themes conflict with _Subtitles_.
+Please see [these long threads](https://github.com/professionalthemes/Subtitles/issues?q=the_title_attribute) as examples of what happens when themes conflict with _Subtitles_.
 
 ---
 
 ### SEO ###
 
-Will _Subtitles_ ruin your SEO? That's a fair question. The answer is no. I've made a note of exactly why `<spans>` are the default wrappers for subtitles in the [inline developer docs](https://github.com/philiparthurmoore/Subtitles/blob/master/subtitles.php) for the plugin, which I'll reiterate here:
+Will _Subtitles_ ruin your SEO? That's a fair question. The answer is no. I've made a note of exactly why `<spans>` are the default wrappers for subtitles in the [inline developer docs](https://github.com/professionalthemes/Subtitles/blob/master/subtitles.php) for the plugin, which I'll reiterate here:
 
 ```php
  * 4. Visually, I have made a major assumption that subtitles belong immediately after titles. The very
@@ -102,7 +102,7 @@ Will _Subtitles_ ruin your SEO? That's a fair question. The answer is no. I've m
  *    @link http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#sub-head
 ```
 
-If you're worried about SEO and the markup of _Subtitles_, then [roll your own markup](https://github.com/philiparthurmoore/Subtitles#modifying-subtitles-markup).
+If you're worried about SEO and the markup of _Subtitles_, then [roll your own markup](https://github.com/professionalthemes/Subtitles#modifying-subtitles-markup).
 
 ---
 
@@ -115,9 +115,9 @@ As of version 2.0.0, _Subtitles_ outputs its CSS via `wp_head`. This is to load 
  * Plugin Name: Subtitles
  * Plugin URI: http://wordpress.org/plugins/subtitles/
  * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
- * Author: Philip Arthur Moore
- * Author URI: https://philiparthurmoore.com/
- * Version: 2.0.0
+ * Author: Professional Themes
+ * Author URI: https://professionalthemes.nyc/
+ * Version: 2.1.1
  * License: GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
@@ -142,7 +142,6 @@ span.entry-subtitle {
  */
 #comments .comments-title span.entry-subtitle {
 	display: none;
-	font-size: 1em;
 }
 ```
 
@@ -206,6 +205,22 @@ add_filter( 'subtitle_markup', 'subtitle_markup_mods' );
 ```
 
 I do not suggest using headings tags for subtitles.
+
+---
+
+### Displaying _Subtitles_ in RSS Feeds ###
+
+By default subtitles do not show in RSS feeds. If you'd like to show them then the following snippet should help:
+
+```php
+/**
+ * Show subtitles in RSS feeds.
+ */
+function display_subtitles_in_rss_feeds() {
+	return false;
+} // end function display_subtitles_in_rss_feeds
+add_filter( 'subtitles_is_feed', 'display_subtitles_in_rss_feeds' );
+```
 
 ---
 
@@ -302,81 +317,88 @@ Proceed with caution here. In some cases getting too cavalier with this may intr
 
 ## Changelog
 
-All versions of _Subtitles_ can be found on the [Releases](https://github.com/philiparthurmoore/Subtitles/releases) page.
+All versions of _Subtitles_ can be found on the [Releases](https://github.com/professionalthemes/Subtitles/releases) page.
 
-### [v2.1.0](https://github.com/philiparthurmoore/Subtitles/releases/tag/v2.1.0) (July 19th, 2015)
+### [v2.1.1](https://github.com/professionalthemes/Subtitles/releases/tag/v2.1.1) (December 9th, 2015)
+
+- **Bug Fix:** Remove redundant htmlspecialchars from admin input (see [issue](https://github.com/professionalthemes/Subtitles/issues/66])).
+- **Patch:** Transfer ownership of plugin to [Professional Themes](https://professionalthemes.nyc/).
+- **Patch:** Give developers the option to show subtitles in RSS feeds (see [issue](https://github.com/professionalthemes/Subtitles/issues/61)).
+- **Extra:** Lithuanian (lt_LT) language packs added.
+
+### [v2.1.0](https://github.com/professionalthemes/Subtitles/releases/tag/v2.1.0) (July 19th, 2015)
 
 - **Extra:** Add a Subtitle column into the Posts and Pages admin screens.
 - **Extra:** We have added in a way for developers to allow more tags in subtitles input.
 - **Extra:** Update plugin POT.
-- **Patch:** Remove font sizing from hidden entry subtitle in comments area (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/46])).
+- **Patch:** Remove font sizing from hidden entry subtitle in comments area (see [issue](https://github.com/professionalthemes/Subtitles/issues/46])).
 
-### [v2.0.1](https://github.com/philiparthurmoore/Subtitles/releases/tag/v2.0.1) (November 6th, 2014)
+### [v2.0.1](https://github.com/professionalthemes/Subtitles/releases/tag/v2.0.1) (November 6th, 2014)
 
-- **Bug Fix:** Do not show subtitles in RSS feeds (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/32)).
+- **Bug Fix:** Do not show subtitles in RSS feeds (see [issue](https://github.com/professionalthemes/Subtitles/issues/32)).
 - **Extra:** Russian (ru_RU) language packs added
 - **Extra:** Better WordPress Coding Standards
-- **Extra:** WordPress 4.1 introduced a new hook called `edit_form_before_permalink` that allows us to move Subtitles into a more natural position, just underneath the post title. Let's use that and preserve backwards compatibility for older versions of WordPress (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/30)).
+- **Extra:** WordPress 4.1 introduced a new hook called `edit_form_before_permalink` that allows us to move Subtitles into a more natural position, just underneath the post title. Let's use that and preserve backwards compatibility for older versions of WordPress (see [issue](https://github.com/professionalthemes/Subtitles/issues/30)).
 
-### [v2.0.0](https://github.com/philiparthurmoore/Subtitles/releases/tag/v2.0.0) (August 31st, 2014)
+### [v2.0.0](https://github.com/professionalthemes/Subtitles/releases/tag/v2.0.0) (August 31st, 2014)
 
-- **Performance Fix:** Better CSS Handling for better overall plugin performance (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/28)).
+- **Performance Fix:** Better CSS Handling for better overall plugin performance (see [issue](https://github.com/professionalthemes/Subtitles/issues/28)).
 
-### [v1.0.7](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.7) (August 17th, 2014)
+### [v1.0.7](https://github.com/professionalthemes/Subtitles/releases/tag/v1.0.7) (August 17th, 2014)
 
-- **Bug Fix:** Better backend tabbing from the title to the subtitle input field (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/23)).
-- **Extra:** Add default support for Jetpack Portfolios (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/26)).
+- **Bug Fix:** Better backend tabbing from the title to the subtitle input field (see [issue](https://github.com/professionalthemes/Subtitles/issues/23)).
+- **Extra:** Add default support for Jetpack Portfolios (see [issue](https://github.com/professionalthemes/Subtitles/issues/26)).
 
-### [v1.0.6](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.6) (August 4th, 2014)
+### [v1.0.6](https://github.com/professionalthemes/Subtitles/releases/tag/v1.0.6) (August 4th, 2014)
 
 - **Bug Fix:** Better visual styling in the back end to keep up with WordPress 4.0
 
-### [v1.0.5](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.5) (July 7th, 2014)
+### [v1.0.5](https://github.com/professionalthemes/Subtitles/releases/tag/v1.0.5) (July 7th, 2014)
 
 - **Bug Fix:** If subtitles are shown in comment areas, we'll hide them by default.
 - **Bug Fix:** Better security for nonce checking after update to the WordPress VIP Coding Standards. See [this discussion](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/190) for more information.
 - **Extra:** Wrap primary entry title parts in spans that theme authors can take advantage of for more fine-grained styling when a post has a subtitle.
-- **Extra:** French (fr_FR) language packs added (see [issue](https://github.com/philiparthurmoore/Subtitles/pull/18)).
+- **Extra:** French (fr_FR) language packs added (see [issue](https://github.com/professionalthemes/Subtitles/pull/18)).
 
-### [v1.0.4](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.4) (June 20th, 2014)
+### [v1.0.4](https://github.com/professionalthemes/Subtitles/releases/tag/v1.0.4) (June 20th, 2014)
 
-- **Bug Fix:** Make sure that other plugins that try to mess with titles do not cause _Subtitles_ to throw PHP warnings due to the second optional `$id` parameter not being sent to the primary `the_subtitles` method used throughout sites (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/16)).
+- **Bug Fix:** Make sure that other plugins that try to mess with titles do not cause _Subtitles_ to throw PHP warnings due to the second optional `$id` parameter not being sent to the primary `the_subtitles` method used throughout sites (see [issue](https://github.com/professionalthemes/Subtitles/issues/16)).
 
-### [v1.0.3](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.3) (June 19th, 2014)
+### [v1.0.3](https://github.com/professionalthemes/Subtitles/releases/tag/v1.0.3) (June 19th, 2014)
 
-- **Bug Fix:** Ensure that _Subtitles_ works in PHP 5.2.4 environments (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/8)).
+- **Bug Fix:** Ensure that _Subtitles_ works in PHP 5.2.4 environments (see [issue](https://github.com/professionalthemes/Subtitles/issues/8)).
 
-### [v1.0.2](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.2) (June 18th, 2014)
+### [v1.0.2](https://github.com/professionalthemes/Subtitles/releases/tag/v1.0.2) (June 18th, 2014)
 
-- **Bug Fix:** Check if `$post` is set before proceeding with any title filtering for subtitles (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/12)).
-- **Bug Fix:** Add a single space between titles and subtitles so that they look sensible when being output as a title attribute (see [commit](https://github.com/philiparthurmoore/Subtitles/commit/5b54263fcf82de6db9e7e0875a0a99974758a81f)).
-- **Extra:** Catalan (ca) language packs added (see [issue](https://github.com/philiparthurmoore/Subtitles/pull/11)).
-- **Extra:** Korean (ko_KR) language packs added (see [issue](https://github.com/philiparthurmoore/Subtitles/pull/10)).
-- **Extra:** Spanish (es_ES) language packs added (see [issue](https://github.com/philiparthurmoore/Subtitles/pull/11)).
+- **Bug Fix:** Check if `$post` is set before proceeding with any title filtering for subtitles (see [issue](https://github.com/professionalthemes/Subtitles/issues/12)).
+- **Bug Fix:** Add a single space between titles and subtitles so that they look sensible when being output as a title attribute (see [commit](https://github.com/professionalthemes/Subtitles/commit/5b54263fcf82de6db9e7e0875a0a99974758a81f)).
+- **Extra:** Catalan (ca) language packs added (see [issue](https://github.com/professionalthemes/Subtitles/pull/11)).
+- **Extra:** Korean (ko_KR) language packs added (see [issue](https://github.com/professionalthemes/Subtitles/pull/10)).
+- **Extra:** Spanish (es_ES) language packs added (see [issue](https://github.com/professionalthemes/Subtitles/pull/11)).
 - **Extra:** Begin preparing plugin for better automated testing via [Travis CI](https://travis-ci.org/), [phpunit](https://github.com/sebastianbergmann/phpunit/), [WordPress Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards), and [CodeSniffer](http://pear.php.net/package/PHP_CodeSniffer/)
 
-### [v1.0.1](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.1) (June 14th, 2014)
+### [v1.0.1](https://github.com/professionalthemes/Subtitles/releases/tag/v1.0.1) (June 14th, 2014)
 
-- **Bug Fix:** Make sure that the plugin automatically works with `single_post_title` (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/2)).
-- **Bug Fix:** Ensure that special characters in post titles do not erroneously cause subtitles to be skipped during title filtering and checks (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/3)).
-- **Bug Fix:** Remove unnecessary ID checks against nav menus (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/4)).
-- **Bug Fix:** Resolve title output issues when [WordPress SEO by Yoast](https://wordpress.org/plugins/wordpress-seo/) breadcrumbs are used inside of [The Loop](http://codex.wordpress.org/The_Loop) (see [issue](https://github.com/philiparthurmoore/Subtitles/issues/5)).
+- **Bug Fix:** Make sure that the plugin automatically works with `single_post_title` (see [issue](https://github.com/professionalthemes/Subtitles/issues/2)).
+- **Bug Fix:** Ensure that special characters in post titles do not erroneously cause subtitles to be skipped during title filtering and checks (see [issue](https://github.com/professionalthemes/Subtitles/issues/3)).
+- **Bug Fix:** Remove unnecessary ID checks against nav menus (see [issue](https://github.com/professionalthemes/Subtitles/issues/4)).
+- **Bug Fix:** Resolve title output issues when [WordPress SEO by Yoast](https://wordpress.org/plugins/wordpress-seo/) breadcrumbs are used inside of [The Loop](http://codex.wordpress.org/The_Loop) (see [issue](https://github.com/professionalthemes/Subtitles/issues/5)).
 - **Extra:** Vietnamese (vi_VN) language packs added.
 - **Extra:** German (de_DE) language packs added.
 - **Extra:** Finnish (fi) language packs added.
 - **Extra:** Italian (it_IT) language packs added.
 - **Extra:** Japanese (ja) language packs added.
 
-### [v1.0.0](https://github.com/philiparthurmoore/Subtitles/releases/tag/v1.0.0) (June 12th, 2014)
-- **Initial Release:** ([Launch Announcement](https://philiparthurmoore.com/subtitles))
+### [v1.0.0](https://github.com/professionalthemes/Subtitles/releases/tag/v1.0.0) (June 12th, 2014)
+- **Initial Release:** ([Launch Announcement](https://professionalthemes.com/subtitles))
 
 ## Screenshots
 
-Two primary screenshots have been shown in this README.md file, one of the post screen and one of an example of what subtitles will look like on the front end of your website. The [assets folder](https://github.com/philiparthurmoore/Subtitles/tree/master/assets) in this GitHub repository will be used to populate screenshots on the WordPress.org plugin site, and will not be included in the official plugin download from WordPress.org.
+Two primary screenshots have been shown in this README.md file, one of the post screen and one of an example of what subtitles will look like on the front end of your website. The [assets folder](https://github.com/professionalthemes/Subtitles/tree/master/assets) in this GitHub repository will be used to populate screenshots on the WordPress.org plugin site, and will not be included in the official plugin download from WordPress.org.
 
 ## Translations
 
-See the [languages](https://github.com/philiparthurmoore/Subtitles/tree/master/languages) folder for more information on using _Subtitles_ in your language. These are considered "Extras" and will usually be released when a version bump has happened to _Subtitles_, for example during a bug fix or enhancement round of updates.
+See the [languages](https://github.com/professionalthemes/Subtitles/tree/master/languages) folder for more information on using _Subtitles_ in your language. These are considered "Extras" and will usually be released when a version bump has happened to _Subtitles_, for example during a bug fix or enhancement round of updates.
 
 ## Versioning
 
