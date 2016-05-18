@@ -5,7 +5,7 @@
  * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
  *      Author: Professional Themes
  *  Author URI: https://professionalthemes.nyc/
- *     Version: 2.1.1
+ *     Version: 2.2.0
  * Text Domain: subtitles
  * Domain Path: /languages/
  *     License: GNU General Public License v2 or later

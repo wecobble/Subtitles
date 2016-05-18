@@ -44,7 +44,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		const VERSION = '2.1.1';
+		const VERSION = '2.2.0';
 
 		/**
 		 * Constant used when referencing the plugin in load text domain calls and other
@@ -500,7 +500,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 				 * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
 				 * Author: Professional Themes
 				 * Author URI: https://professionalthemes.nyc/
-				 * Version: 2.1.1
+				 * Version: 2.2.0
 				 * License: GNU General Public License v2 or later
 				 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 				 */
