@@ -582,8 +582,21 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			 */
 			$post_id = (int) absint( $post->ID ); // post ID should always be a non-negative integer
 			$subtitle = (string) html_entity_decode( wp_unslash( esc_html( get_post_meta( $post_id, self::SUBTITLE_META_KEY, true ) ) ), ENT_QUOTES );
-
-			if ( '' == $subtitle ) {
+			
+			$subtitle_exists =  ! empty( $subtitle );
+			
+			/**
+			 * Filters whether the subtitle exists.
+			 * 
+			 * @param boolean $subtitle_exists Whether the subtitle exists
+			 */
+			$subtitle_exists = apply_filters( 'subtitle_exists',  $subtitle_exists );
+			
+			/*
+			 * By default, this would be false and we bail.
+			 *  However, one could force it to be true and prevent this bailing
+			 */
+			if ( ! $subtitle_exists ) {
 				return $title;
 			}
 
