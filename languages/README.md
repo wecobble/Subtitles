@@ -4,6 +4,7 @@ This plugin currently only uses one translatable string: **Enter subtitle here**
 
 Right now, _Subtitles_ is available in the following additional languages:
 
+- Brazilian Portuguese ([Douglas Moura](http://profiles.wordpress.org/gafanhoto))
 - Catalan ([José Luis Cruz](http://profiles.wordpress.org/joseluiscruz))
 - Finnish ([Sami Keijonen](http://profiles.wordpress.org/samikeijonen))
 - French ([Jean-Christophe Brebion](http://profiles.wordpress.org/jcbrebion))
