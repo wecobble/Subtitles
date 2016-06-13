@@ -597,7 +597,16 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			$post_id = (int) absint( $post->ID ); // post ID should always be a non-negative integer
 			$subtitle = (string) html_entity_decode( wp_unslash( esc_html( get_post_meta( $post_id, self::SUBTITLE_META_KEY, true ) ) ), ENT_QUOTES );
 
-			if ( '' == $subtitle ) {
+			/**
+			 * Allow theme and plugin authors to override the early return if no subtitle exists.
+			 *
+			 * @see   https://github.com/professionalthemes/Subtitles/issues/79
+			 * @since 2.2.0
+			 */
+			$subtitle_exists = ! empty( $subtitle );
+			$subtitle_exists = apply_filters( 'subtitle_exists',  $subtitle_exists );
+
+			if ( ! $subtitle_exists ) {
 				return $title;
 			}
 
