@@ -66,7 +66,7 @@
  *    `add_post_type_support( $post_type, 'subtitles' )`. Remember to do this within a function that's
  *    hooked to `init`. See the Codex for more information:
  *    @link http://codex.wordpress.org/Function_Reference/add_post_type_support
- *    @link http://jetpack.me/
+ *    @link http://jetpack.com/
  *
  * One of the drawbacks of this approach, which I think is minor enough to proceed with the design of the plugin,
  * is that the $before and $after values in the_title() are unable to be filtered. What this means is that for
