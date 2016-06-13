@@ -234,8 +234,8 @@ If you'd like to change this behavior, you can do so by taking advantage of `sub
 /**
  * Disable Subtitles in archive views.
  *
- * @uses  function is_archive
- * @uses  function in_the_loop
+ * @see function is_archive
+ * @see function in_the_loop
  */
 function subtitles_mod_supported_views() {
 	// Ditch subtitles in archives.
@@ -249,6 +249,26 @@ function subtitles_mod_supported_views() {
 	}
 } // end function subtitles_mod_supported_views
 add_filter( 'subtitle_view_supported', 'subtitles_mod_supported_views' );
+```
+
+---
+
+### Allowing developers to override the early bailout if no subtitle exists. ###
+
+By default, the plugin will bail out early if no subtitle is present on a post. As of version 2.2.0, this behavior can be modified. The sample code snippet below will work just fine:
+
+```php
+/**
+ * Override the early return if no subtitle exists.
+ *
+ * @see function is_archive
+ * @see function in_the_loop
+ */
+function subtitle_does_exist() {
+	return true;
+
+} // end function subtitle_does_exist
+add_filter( 'subtitle_exists', 'subtitle_does_exist' );
 ```
 
 ---
