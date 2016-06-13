@@ -253,7 +253,7 @@ add_filter( 'subtitle_view_supported', 'subtitles_mod_supported_views' );
 
 ---
 
-### Allowing developers to override the early bailout if no subtitle exists. ###
+### Allow Developers to Override the Early Bailout if No Subtitle Exists. ###
 
 By default, the plugin will bail out early if no subtitle is present on a post. As of version 2.2.0, this behavior can be modified. The sample code snippet below will work just fine:
 
