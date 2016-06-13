@@ -341,6 +341,12 @@ All versions of _Subtitles_ can be found on the [Releases](https://github.com/pr
 
 ### [v2.2.0] (https://github.com/professionalthemes/Subtitles/releases/tag/v2.2.0) (June 13th, 2016)
 
+**Extra:** Allow theme and plugin authors to override the early return if no subtitle exists.
+**Extra:** Automatically enable subtitles support for Jetpack Testimonials.
+**Patch:** Remove French language packs so that they are able to be directly pulled from WordPress.org (see [issue](https://wordpress.org/support/topic/french-translation-updated-3))
+**Patch:** Change jetpack.me links to jetpack.com.
+**Patch:** Change plugin donation link to point to Professional Themes PayPal account.
+
 ### [v2.1.1](https://github.com/professionalthemes/Subtitles/releases/tag/v2.1.1) (December 9th, 2015)
 
 - **Bug Fix:** Remove redundant htmlspecialchars from admin input (see [issue](https://github.com/professionalthemes/Subtitles/issues/66])).
