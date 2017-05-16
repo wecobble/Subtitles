@@ -125,4 +125,4 @@ script:
 notifications:
     email: false
     slack:
-        secure: "Rz3watoFmnLqWkEFYFwW6mZCvQMof64JkPLUkHQU0NASBe/D1KsEkoBWdTpmZfRm+2UkrGlwG80kEgo8gb7CoBpjeBody6I6uSXxAYCH9ifazaPZlwf94O2hfCs6K3bdSb6SH8hnXp1chP2Xj4k4dr3YgwobJtBKk4gTAXV8F5U="
+        secure: N/bny2W0qfnf50ndsixNnQaHEHLYnKFuGiIkH1v/pg+LqI0aWhD5Qnb8A6/vSMMqRTsktqtFI3iOhaCaR/kysmXKyIl5KZXvJ00xUtcRbAhvlpqGMAEnpESDYH0SJu30PS4QOgLzXP8rgBLBfW1CyO/z7mqbvMUYNC3Gl0PpCEc=
