@@ -6,7 +6,7 @@
     "url": "https://professionalthemes.nyc/"
   },
   "description": "Easily add subtitles into your WordPress posts, pages, custom post types, and themes.",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "license": "GPLv2 or later",
   "devDependencies": {
     "grunt": "^0.4.5",
