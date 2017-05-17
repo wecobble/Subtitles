@@ -64,7 +64,7 @@ module.exports = function(grunt) {
 
 		/**
 		 * Theme and Plugin internationalization
-		 * @see https://github.com/blazersix/grunt-wp-i18n/
+		 * @see https://github.com/cedaro/grunt-wp-i18n
 		 */
 		makepot: {
 			target: {
