@@ -215,8 +215,7 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 			if ( $is_nonce_set ) {
 				$nonce = sanitize_key( $_POST[ self::SUBTITLE_NONCE_NAME ] );
 				$is_verified_nonce = (bool) wp_verify_nonce( $nonce, basename( __FILE__ ) );
-			}
-			else {
+			} else {
 				$is_verified_nonce = null;
 			}
 
@@ -400,4 +399,4 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 			}
 		} // end function build_subtitles_column_content
 	} // end class Subtitles_Admin
-} // end class Subtitles_Admin check
+} // End if().

@@ -506,7 +506,8 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		 * @access public
 		 * @since  2.0.0
 		 */
-		public function subtitle_styling() { ?>
+		public function subtitle_styling() {
+	?>
 			<style type="text/css" media="screen">
 				/**
 				 * Plugin Name: Subtitles
@@ -639,7 +640,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			if ( isset( $id ) && is_object( $id ) ) { // single_post_title() is being used.
 				$id = $id->ID; // grab the ID from the post object.
 			}
-			if ( isset( $post->post_title ) && $id != get_the_ID() ) {
+			if ( isset( $post->post_title ) && get_the_ID() != $id ) {
 				return $title;
 			}
 
@@ -769,4 +770,4 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			return apply_filters( 'the_subtitle', $subtitle );
 		} // end get_the_subtitle()
 	} // end class Subtitles
-} // end class Subtitles check
+} // End if().

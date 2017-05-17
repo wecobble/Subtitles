@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 	 * Load tasks.
 	 * @see https://www.npmjs.com/package/matchdep
 	 */
-	require( 'matchdep' ).filterDev(['grunt-*']).forEach( grunt.loadNpmTasks );
+	require( 'matchdep' ).filterDev( ['grunt-*'] ).forEach( grunt.loadNpmTasks );
 
 	// config
 	grunt.initConfig( {

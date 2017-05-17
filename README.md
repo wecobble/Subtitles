@@ -339,6 +339,10 @@ Proceed with caution here. In some cases getting too cavalier with this may intr
 
 All versions of _Subtitles_ can be found on the [Releases](https://github.com/professionalthemes/Subtitles/releases) page.
 
+### [v2.3.0](#) (TBD)
+
+- Release notes to come after all commits has been reviewed.
+
 ### [v2.2.1](https://github.com/professionalthemes/Subtitles/releases/tag/v2.2.1) (June 13th, 2016)
 
 - **Version Bump:** Fix wonky 2.2.0 release. No changes here; just a version bump to fix the last release package.

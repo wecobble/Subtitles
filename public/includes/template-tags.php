@@ -41,7 +41,7 @@ if ( ! function_exists( 'the_subtitle' ) ) {
 			return $subtitle;
 		}
 	} // end function the_subtitle
-} // end the_subtitle check
+} // End if().
 
 if ( ! function_exists( 'get_the_subtitle' ) ) {
 	/**
@@ -53,4 +53,4 @@ if ( ! function_exists( 'get_the_subtitle' ) ) {
 		$subtitle = Subtitles::get_the_subtitle( $post );
 		return $subtitle;
 	} // end function get_the_subtitle
-} // end get_the_subtitle check
+} // End if().

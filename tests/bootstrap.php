@@ -28,7 +28,7 @@ ini_set( 'display_errors', 'on' ); // Display errors.
  */
 if ( function_exists( 'xdebug_disable' ) ) {
 	xdebug_disable();
-} // end if xdebug_disable check
+} // End if().
 
 /**
  * Output a little bit of helpful information about the testing suite,

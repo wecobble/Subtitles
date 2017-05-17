@@ -190,4 +190,4 @@ if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
 			'getinstance',
 		)
 	); // end add_action()
-} // end is_admin and DOING_AJAX checks
+} // End if().
