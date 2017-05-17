@@ -179,7 +179,7 @@ require plugin_dir_path( __FILE__ ) . 'public/includes/template-tags.php';
  */
 
 if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
-	require plugin_dir_path( __FILE__ ) . 'admin/subtitles-admin.php';
+	require plugin_dir_path( __FILE__ ) . 'admin/class-subtitles-admin.php';
 
 	add_action(
 		'plugins_loaded', // The hook on which Subtitles_Admin is fired.

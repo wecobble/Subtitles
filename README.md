@@ -341,7 +341,7 @@ All versions of _Subtitles_ can be found on the [Releases](https://github.com/pr
 
 ### [v2.3.0](#) (TBD)
 
-- Release notes to come after all commits has been reviewed.
+- **Version Bump:** Fix all WordPress Coding Standards errors and update Tested Up To version.
 
 ### [v2.2.1](https://github.com/professionalthemes/Subtitles/releases/tag/v2.2.1) (June 13th, 2016)
 
