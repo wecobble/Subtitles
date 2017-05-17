@@ -5,42 +5,8 @@
 
 	<exclude-pattern>assets/*</exclude-pattern>
 	<exclude-pattern>bin/*</exclude-pattern>
-	<exclude-pattern>designs/*</exclude-pattern>
-	<exclude-pattern>languages/tools/*</exclude-pattern>
+	<exclude-pattern>languages/*</exclude-pattern>
 	<exclude-pattern>node_modules/*</exclude-pattern>
 	<exclude-pattern>releases/*</exclude-pattern>
 	<exclude-pattern>tests/*</exclude-pattern>
-
-	<!-- Include the WordPress ruleset, with exclusions. -->
-	<rule ref="WordPress">
-		<exclude name="WordPress.XSS.EscapeOutput.OutputNotEscaped" />
-		<exclude name="WordPress.Variables.GlobalVariables" />
-		<exclude name="WordPress.PHP.YodaConditions" />
-		<exclude name="WordPress.VIP.FileSystemWritesDisallow.FileWriteDetected" />
-		<exclude name="WordPress.VIP.ValidatedSanitizedInput.MissingUnslash" />
-
-		<exclude name="Generic.Commenting.DocComment.LongNotCapital" />
-		<exclude name="Generic.Commenting.DocComment.MissingShort" />
-		<exclude name="Generic.Commenting.DocComment.SpacingBeforeTags" />
-		<exclude name="Generic.Files.EndFileNewline.NotFound" />
-		<exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie.ContentAfterBrace" />
-		<exclude name="Generic.Commenting.DocComment.ShortNotCapital" />
-
-		<exclude name="Squiz.Commenting.BlockComment" />
-		<exclude name="Squiz.Commenting.BlockComment.NoCapital" />
-		<exclude name="Squiz.Commenting.ClassComment.Missing" />
-		<exclude name="Squiz.Commenting.ClassComment.SpacingBefore" />
-		<exclude name="Squiz.Commenting.FileComment.Missing" />
-		<exclude name="Squiz.Commenting.FileComment.WrongStyle" />
-		<exclude name="Squiz.Commenting.FunctionComment.Missing" />
-		<exclude name="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing" />
-		<exclude name="Squiz.Commenting.InlineComment.InvalidEndChar" />
-		<exclude name="Squiz.Commenting.InlineComment.NotCapital" />
-		<exclude name="Squiz.Commenting.VariableComment.MissingVar" />
-		<exclude name="Squiz.Commenting.FunctionComment.MissingParamTag" />
-		<exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType" />
-		<exclude name="Squiz.Commenting.FunctionCommentThrowTag.Missing" />
-		<exclude name="Squiz.ControlStructures.ControlSignature.SpaceAfterKeyword" />
-		<exclude name="Squiz.ControlStructures.ControlSignature.SpaceAfterCloseBrace" />
-	</rule>
 </ruleset>
