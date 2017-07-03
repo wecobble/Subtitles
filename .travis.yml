@@ -90,4 +90,4 @@ script:
 notifications:
     email: false
     slack:
-        secure: N/bny2W0qfnf50ndsixNnQaHEHLYnKFuGiIkH1v/pg+LqI0aWhD5Qnb8A6/vSMMqRTsktqtFI3iOhaCaR/kysmXKyIl5KZXvJ00xUtcRbAhvlpqGMAEnpESDYH0SJu30PS4QOgLzXP8rgBLBfW1CyO/z7mqbvMUYNC3Gl0PpCEc=
+        secure: ljb0PZjk7wlhmO/Wlqrc/p1GIEMorMtGbIO1ol3lNM+5GKLC9xO+Akl2tEXRgM3tOWNVIL+G2OoURGXcSCCvchcJsx84+W54strKNisVXsIAtDcLvBgzyYhnAZdGLnB4u1szv0cB4VxlV4RNoPgPo2/QHvWsee/ycMT4mZBC7xk=
