@@ -148,7 +148,7 @@ span.entry-subtitle {
 If you'd like to remove this additional CSS, then simply add a similar function to the following in your plugin or theme's primary setup file:
 
 ```php
-if ( class_exists( 'Subtitles' ) &&  method_exists( 'Subtitles', 'subtitle_styling' ) ) {
+if ( class_exists( 'Subtitles' ) && method_exists( 'Subtitles', 'subtitle_styling' ) ) {
 	remove_action( 'wp_head', array( Subtitles::getInstance(), 'subtitle_styling' ) );
 }
 ```
