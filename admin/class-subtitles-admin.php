@@ -37,10 +37,18 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 		 * @since 1.0.3
 		 */
 		private static $instance = null;
+		private static $quick_edit_support = null;
 
 		public static function getinstance() {
 			if ( ! self::$instance ) {
 				self::$instance = new Subtitles_Admin;
+			}
+
+			if ( ! self::$quick_edit_support ) {
+				require_once( __DIR__ . '/class-quick-edit-support.php' );
+
+				self::$quick_edit_support = new Subtitles_Quick_Edit_Support();
+				self::$quick_edit_support->register();
 			}
 
 			return self::$instance;
@@ -263,6 +271,18 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 			$new_subtitle = (string) isset( $_POST[ $subtitle_meta_key ] ) ? wp_kses( $_POST[ $subtitle_meta_key ], $subtitles_allowed_tags ) : null;
 			// Get the current subtitle assigned to the post
 			$current_subtitle = (string) wp_kses( get_post_meta( $post_id, $subtitle_meta_key, true ), $subtitles_allowed_tags );
+
+			/**
+			 * KLUDGE:
+			 *
+			 * Ignore the subtitle value of '-'. This hack is needed since we can't give
+			 * subtitle values to each quick edit subtitle. Otherwise
+			 * all quick edits subtitles will be rendered with the subtitle of the first
+			 * post in the list table.
+			 */
+			if ( $new_subtitle === '-' ) {
+				return;
+			}
 
 			/**
 			 * Add meta when key is new or empty for post
