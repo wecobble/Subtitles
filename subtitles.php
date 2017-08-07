@@ -178,7 +178,7 @@ require plugin_dir_path( __FILE__ ) . 'public/includes/template-tags.php';
  * @since 1.0.0
  */
 
-if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
+if ( is_admin() ) {
 	require plugin_dir_path( __FILE__ ) . 'admin/class-subtitles-admin.php';
 
 	add_action(
