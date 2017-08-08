@@ -9,8 +9,9 @@
 language: php
 
 # Ditch sudo and use containers.
-# http://docs.travis-ci.com/user/migrating-from-legacy/?utm_source=legacy-notice&utm_medium=banner&utm_campaign=legacy-upgrade
+# http://docs.travis-ci.com/user/workers/container-based-infrastructure/
 sudo: false
+dist: trusty
 
 # Declare versions of PHP to use. Use one decimal max.
 # @link http://docs.travis-ci.com/user/build-configuration/
