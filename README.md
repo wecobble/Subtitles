@@ -339,7 +339,7 @@ Proceed with caution here. In some cases getting too cavalier with this may intr
 
 All versions of _Subtitles_ can be found on the [Releases](https://github.com/wecobble/Subtitles/releases) page.
 
-### [v3.0.0](#) (TBD)
+### [v3.0.0](https://github.com/wecobble/Subtitles/releases/tag/v3.0.0) (August 8th, 2017)
 
 - **Version Bump:** Fix all WordPress Coding Standards errors and update Tested Up To version.
 - **Patch:** Transfer ownership of plugin to [We Cobble](https://wecobble.com/)
