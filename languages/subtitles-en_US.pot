@@ -1,8 +1,8 @@
-# Copyright (C) 2017 Professional Themes
+# Copyright (C) 2014-2017 We Cobble
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Subtitles 2.3.0\n"
+"Project-Id-Version: Subtitles 3.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/subtitles\n"
 "POT-Creation-Date: 2017-05-17 20:06:12+00:00\n"
 "MIME-Version: 1.0\n"
@@ -36,9 +36,9 @@ msgid ""
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Professional Themes"
+msgid "We Cobble"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://professionalthemes.nyc/"
+msgid "https://wecobble.com/"
 msgstr ""

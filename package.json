@@ -2,11 +2,11 @@
   "name": "subtitles",
   "homepage": "https://wordpress.org/plugins/subtitles/",
   "author": {
-    "name": "Professional Themes",
-    "url": "https://professionalthemes.nyc/"
+    "name": "We Cobble",
+    "url": "https://wecobble.com/"
   },
   "description": "Easily add subtitles into your WordPress posts, pages, custom post types, and themes.",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "license": "GPLv2 or later",
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -23,10 +23,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:professionalthemes/Subtitles.git"
+    "url": "git@github.com:wecobble/Subtitles.git"
   },
   "bugs": {
-    "url": "https://github.com/professionalthemes/Subtitles/issues"
+    "url": "https://github.com/wecobble/Subtitles/issues"
   },
   "private": true,
   "dependencies": {

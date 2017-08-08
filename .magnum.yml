@@ -2,7 +2,7 @@
 # @link https://magnum-ci.com/
 #
 # For use with the Subtitles WordPress Plugin
-# @link https://github.com/professionalthemes/Subtitles
+# @link https://github.com/wecobble/Subtitles
 
 install:
     - sudo apt-get update -y

@@ -1,4 +1,4 @@
-# Copyright (C) 2015 Professional Themes
+# Copyright (C) 2014-2017 We Cobble
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
@@ -37,10 +37,9 @@ msgid "Easily add subtitles into your WordPress posts, pages, custom post types,
 msgstr "Adicione subtítulos facilmente nos seus posts, páginas, tipos de posts customizados e temas."
 
 #. Author of the plugin/theme
-msgid "Professional Themes"
-msgstr "Professional Themes"
+msgid "We Cobble"
+msgstr "We Cobble"
 
 #. Author URI of the plugin/theme
-msgid "https://professionalthemes.nyc/"
-msgstr "https://professionalthemes.nyc/"
-
+msgid "https://wecobble.com/"
+msgstr "https://wecobble.com/"
