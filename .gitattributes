@@ -7,6 +7,10 @@ Gruntfile.js export-ignore
 .magnum.yml export-ignore
 phpunit.config.xml export-ignore
 codesniffer.ruleset.xml export-ignore
+.jscsrc export-ignore
+.jshintignore export-ignore
+.jshintrc export-ignore
+.travis.yml export-ignore
 # Folders
 node_modules export-ignore
 languages/tools export-ignore
