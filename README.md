@@ -89,9 +89,9 @@ Please see [these long threads](https://github.com/wecobble/Subtitles/issues?q=t
 Will _Subtitles_ ruin your SEO? That's a fair question. The answer is no. We've made a note of exactly why `<spans>` are the default wrappers for subtitles in the [inline developer docs](https://github.com/wecobble/Subtitles/blob/master/subtitles.php) for the plugin, which I'll reiterate here:
 
 ```php
- * 4. Visually, We have made a major assumption that subtitles belong immediately after titles. The very
+ * 4. Visually, we have made a major assumption that subtitles belong immediately after titles. The very
  *    definition of a subtitle is that it is a subordinate title of a published work that often gives
- *    explanatory details about the immediately preceeding title. It's for this reason that We've chosen
+ *    explanatory details about the immediately preceeding title. It's for this reason that we've chosen
  *    to filter the output of the_title() with the expectation that post titles will be wrapped in
  *    primary heading (h1) tags. So post titles will be H1, while their subtitles will be spans.
  *    Multiple H1 tags in the HTML5 age are okay.
