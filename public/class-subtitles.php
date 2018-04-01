@@ -44,7 +44,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		const VERSION = '2.2.0';
+		const VERSION = '3.1.0';
 
 		/**
 		 * Constant used when referencing the plugin in load text domain calls and other
@@ -513,9 +513,9 @@ if ( ! class_exists( 'Subtitles' ) ) {
 				 * Plugin Name: Subtitles
 				 * Plugin URI: http://wordpress.org/plugins/subtitles/
 				 * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
-				 * Author: We Cobble
+				 * Author: <a href="https://philip.blog/">Philip Arthur Moore</a>, <a href="https://wecobble.com">We Cobble</a>
 				 * Author URI: https://wecobble.com/
-				 * Version: 2.2.0
+				 * Version: 3.1.0
 				 * License: GNU General Public License v2 or later
 				 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 				 */

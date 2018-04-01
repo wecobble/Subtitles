@@ -66,7 +66,7 @@ When you uninstall _Subtitles_, nothing will happen to your subtitles post meta.
 
 ### _Subtitles_ Doesn't Work! ###
 
-There are two primary issues that may cause users to think that _Subtitles_ doesn't work: 1) no subtitles show on the site or 2) weird HTML begins to appear around titles on a site. I will address both of those here.
+There are two primary issues that may cause users to think that _Subtitles_ doesn't work: 1) no subtitles show on the site or 2) weird HTML begins to appear around titles on a site. We will address both of those here.
 
 #### Subtitles Don't Show Up On My Site!
 
@@ -86,12 +86,12 @@ Please see [these long threads](https://github.com/wecobble/Subtitles/issues?q=t
 
 ### SEO ###
 
-Will _Subtitles_ ruin your SEO? That's a fair question. The answer is no. I've made a note of exactly why `<spans>` are the default wrappers for subtitles in the [inline developer docs](https://github.com/wecobble/Subtitles/blob/master/subtitles.php) for the plugin, which I'll reiterate here:
+Will _Subtitles_ ruin your SEO? That's a fair question. The answer is no. We've made a note of exactly why `<spans>` are the default wrappers for subtitles in the [inline developer docs](https://github.com/wecobble/Subtitles/blob/master/subtitles.php) for the plugin, which I'll reiterate here:
 
 ```php
- * 4. Visually, I have made a major assumption that subtitles belong immediately after titles. The very
+ * 4. Visually, We have made a major assumption that subtitles belong immediately after titles. The very
  *    definition of a subtitle is that it is a subordinate title of a published work that often gives
- *    explanatory details about the immediately preceeding title. It's for this reason that I've chosen
+ *    explanatory details about the immediately preceeding title. It's for this reason that We've chosen
  *    to filter the output of the_title() with the expectation that post titles will be wrapped in
  *    primary heading (h1) tags. So post titles will be H1, while their subtitles will be spans.
  *    Multiple H1 tags in the HTML5 age are okay.
@@ -339,6 +339,10 @@ Proceed with caution here. In some cases getting too cavalier with this may intr
 
 All versions of _Subtitles_ can be found on the [Releases](https://github.com/wecobble/Subtitles/releases) page.
 
+### [v3.1.0] (TBD)
+
+- TBD
+
 ### [v3.0.0](https://github.com/wecobble/Subtitles/releases/tag/v3.0.0) (August 8th, 2017)
 
 - **Version Bump:** Fix all WordPress Coding Standards errors and update Tested Up To version.
@@ -440,7 +444,7 @@ See the [languages](https://github.com/wecobble/Subtitles/tree/master/languages)
 
 ## Versioning
 
-I've done my best to adhere to [Semantic Versioning](http://semver.org) for _Subtitles_.
+We've done our best to adhere to [Semantic Versioning](http://semver.org) for _Subtitles_.
 
 Given a version number MAJOR.MINOR.PATCH, increment the:
 

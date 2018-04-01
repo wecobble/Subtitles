@@ -4,7 +4,7 @@
  *  Plugin URI: http://wordpress.org/plugins/subtitles/
  * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
  *      Author: <a href="https://philip.blog/">Philip Arthur Moore</a>, <a href="https://wecobble.com">We Cobble</a>
- *     Version: 3.0.0
+ *     Version: 3.1.0
  * Text Domain: subtitles
  * Domain Path: /languages/
  *     License: GNU General Public License v2 or later
