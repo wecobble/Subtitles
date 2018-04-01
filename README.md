@@ -10,7 +10,7 @@ Right now WordPress currently presents no easy way for web publishers to add sub
 
 Simply download _Subtitles_, activate it, and begin adding subtitles into your posts and pages today. For more advanced usage of the plugin, please see the [Frequently Asked Questions](https://github.com/wecobble/Subtitles/blob/master/README.md#frequently-asked-questions).
 
-If you like _Subtitles_, [thank me with coffee](https://www.paypal.me/wecobble) :coffee:. If you find it buggy, [tell me on GitHub](https://github.com/wecobble/Subtitles/issues) :beetle:. And if you have a cool example of how you're using _Subtitles_ on your website, let me know on [Twitter](https://twitter.com/philip_arthur) :bird:.
+If you like _Subtitles_, [thank us with coffee](https://www.paypal.me/wecobble) :coffee:. If you find it buggy, [tell us on GitHub](https://github.com/wecobble/Subtitles/issues) :beetle:. And if you have a cool example of how you're using _Subtitles_ on your website, let us know on [Twitter](https://twitter.com/wecobblellc) :bird:.
 
 ## Installation
 
