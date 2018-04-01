@@ -1,6 +1,6 @@
 # Subtitles WordPress Plugin
 
-![Travis CI Build Status](https://travis-ci.org/wecobble/Subtitles.svg?branch=master) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Maintainability](https://api.codeclimate.com/v1/badges/0a1f6c571a369ebce00b/maintainability)](https://codeclimate.com/github/wecobble/Subtitles/maintainability)
+![Travis CI Build Status](https://travis-ci.org/wecobble/Subtitles.svg?branch=master) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Maintainability](https://api.codeclimate.com/v1/badges/0a1f6c571a369ebce00b/maintainability)](https://codeclimate.com/github/wecobble/Subtitles/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/0a1f6c571a369ebce00b/test_coverage)](https://codeclimate.com/github/wecobble/Subtitles/test_coverage)
 
 ![Subtitles in action](https://i.cloudup.com/YoFzxUCM2S.png)
 
