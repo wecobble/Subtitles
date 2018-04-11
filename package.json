@@ -6,7 +6,7 @@
     "url": "https://wecobble.com/"
   },
   "description": "Easily add subtitles into your WordPress posts, pages, custom post types, and themes.",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "license": "GPLv2 or later",
   "devDependencies": {
     "grunt": "^0.4.5",

@@ -339,7 +339,7 @@ Proceed with caution here. In some cases getting too cavalier with this may intr
 
 All versions of _Subtitles_ can be found on the [Releases](https://github.com/wecobble/Subtitles/releases) page.
 
-### [v3.1.0] (TBD)
+### [v4.0.0] (TBD)
 
 - TBD
 
