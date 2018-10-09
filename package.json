@@ -15,7 +15,7 @@
     "grunt-git-archive": "0.0.3",
     "grunt-pot": "^0.2.1",
     "grunt-search": "^0.1.8",
-    "grunt-ts": "^5.5.1",
+    "grunt-ts": "^6.0.0-beta.21",
     "grunt-wp-i18n": "^1.0.2",
     "load-grunt-tasks": "^3.5.2",
     "matchdep": "^2.0.0",
