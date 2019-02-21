@@ -10,7 +10,7 @@
  *     License: GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Subtitles WordPress Plugin, Copyright 2014-2018 We Cobble <mail@wecobble.com>,
+ * Subtitles WordPress Plugin, Copyright 2014-2019 We Cobble <mail@wecobble.com>,
  * distributed under the terms of the GNU General Public License v2 or later.
  *
  * Right now WordPress currently presents no easy way for web publishers to add
