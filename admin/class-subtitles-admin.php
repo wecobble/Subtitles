@@ -96,6 +96,16 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 			}
 
 			/**
+			 * Add Subtitle metabox in pannel for block editor.
+			 *
+			 * @see add_action()
+			 * @link http://codex.wordpress.org/Function_Reference/add_action
+			 *
+			 * @since 4.0.0
+			 */
+			add_action( 'add_meta_boxes', array( &$this, 'add_meta_boxes' ) );
+
+			/**
 			 * Validate and update the subtitle input field.
 			 *
 			 * @see add_action()
@@ -188,6 +198,50 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 
 			do_action( 'edit_form_after_subtitle', $post );
 		} // end build_subtitle_input()
+
+		/**
+		 * Add metabox to block editor pannel.
+		 *
+		 * @access public
+		 *
+		 * @param string  $post_type Post type.
+		 * @since 4.0.0
+		 */
+		public function add_meta_boxes( $post_type ) {
+			$post_type_support = post_type_supports( $post_type, self::SUBTITLE_FEATURE_SUPPORT );
+			if ( ! $post_type_support ) {
+				return;
+			}
+
+			if ( ! $this->block_editor_supported( $post_type ) ) {
+				return;
+			}
+
+			add_meta_box(
+				'subtitle_panel',
+				__( 'Subtitle', 'subtitles' ),
+				array( $this, 'build_subtitle_input' ),
+				$post_type,
+				'side',
+				'high'
+			);
+		}
+
+		/**
+		 * Check if post type supports the block editor.
+		 *
+		 * @access private
+		 *
+		 * @param string  $post_type Post type.
+		 * @since 4.0.0
+		 * @return  bool
+		 */
+		private function block_editor_supported( $post_type ) {
+			if ( function_exists( 'use_block_editor_for_post_type' ) && use_block_editor_for_post_type( $post_type ) && ! isset( $_GET['classic-editor'] ) ) {
+				return true;
+			}
+			return false;
+		}
 
 		/**
 		 * Validate and save custom metadata associated with Subtitles.
@@ -316,6 +370,18 @@ if ( ! class_exists( 'Subtitles_Admin' ) ) {
 			 * @since 1.0.0
 			 */
 			if ( 'post-new.php' != $hook && 'post.php' != $hook ) {
+				return;
+			}
+
+			/**
+			 * Bail on these scripts and styles if post type is not supported.
+			 *
+			 * They are not needed for the block editor.
+			 *
+			 * @since 4.0.0
+			 */
+			$screen = (object) get_current_screen();
+			if ( $this->block_editor_supported( $screen->post_type ) || ! post_type_supports( $screen->post_type, self::SUBTITLE_FEATURE_SUPPORT ) ) {
 				return;
 			}
 
