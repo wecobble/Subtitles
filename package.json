@@ -9,7 +9,7 @@
   "version": "4.0.0",
   "license": "GPLv2 or later",
   "devDependencies": {
-    "grunt": "^1.0.3",
+    "grunt": "^1.0.4",
     "grunt-contrib-jshint": "^2.0.0",
     "grunt-contrib-uglify": "^4.0.0",
     "grunt-git-archive": "0.0.3",
