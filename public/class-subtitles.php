@@ -44,7 +44,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		const VERSION = '2.2.0';
+		const VERSION = '4.0.0';
 
 		/**
 		 * Constant used when referencing the plugin in load text domain calls and other
@@ -241,8 +241,11 @@ if ( ! class_exists( 'Subtitles' ) ) {
 				 * @link https://github.com/wecobble/Subtitles/issues/5
 				 *
 				 * @since 1.0.1
+				 * @since 4.0.0 - Deprecate the wp_seo_get_bc_title filter and use
+				 *                wpseo_breadcrumb_single_link_info instead.
+				 *                See https://yoast.com/yoast-seo-5-8/
 				 */
-				add_filter( 'wp_seo_get_bc_title', array( &$this, 'plugin_compat_wordpress_seo' ) );
+				add_filter( 'wpseo_breadcrumb_single_link_info', array( &$this, 'plugin_compat_wordpress_seo' ) );
 			}
 		} // end method __construct
 
@@ -262,7 +265,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 		 *
 		 * @since 1.0.1
 		 */
-		public function plugin_compat_wordpress_seo( $title ) {
+		public function plugin_compat_wordpress_seo( $breadcrumb_text ) {
 			/**
 			 * This issue only arrises when breadcrumbs are placed inside of The Loop,
 			 * so we'll first check to see if we're in The Loop, and if not, just bail
@@ -274,7 +277,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			 */
 			$in_the_loop = (bool) in_the_loop();
 			if ( ! $in_the_loop ) {
-				return $title;
+				return $breadcrumb_text;
 			}
 
 			/**
@@ -307,7 +310,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			 *
 			 * Example: (string) "Post TitleSubtitle"
 			 */
-			$post_title = $title;
+			$post_title = (string) $breadcrumb_text['text'];
 
 			/**
 			 * Grab the length of the filtered post title.
@@ -331,7 +334,7 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			 * @since 1.0.1
 			 */
 			if ( ( $post_title == $post_subtitle ) || ( '' == $post_title ) ) {
-				return $title;
+				return $breadcrumb_text;
 			}
 
 			/**
@@ -361,12 +364,13 @@ if ( ! class_exists( 'Subtitles' ) ) {
 			 */
 			$reconstructed_title = $post_title . $post_subtitle;
 
-			if ( $reconstructed_title == $title ) {
-				return $post_title;
+			if ( $reconstructed_title == $breadcrumb_text['text'] ) {
+				$breadcrumb_text['text'] = $post_title;
+				return $breadcrumb_text;
 			}
 
 			// else just return the title that was brought into the function
-			return $title;
+			return $breadcrumb_text;
 		} // end plugin_compat_wordpress_seo()
 
 		/**
@@ -513,9 +517,9 @@ if ( ! class_exists( 'Subtitles' ) ) {
 				 * Plugin Name: Subtitles
 				 * Plugin URI: http://wordpress.org/plugins/subtitles/
 				 * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
-				 * Author: We Cobble
+				 * Author: <a href="https://philip.blog/">Philip Arthur Moore</a>, <a href="https://wecobble.com">We Cobble</a>
 				 * Author URI: https://wecobble.com/
-				 * Version: 2.2.0
+				 * Version: 4.0.0
 				 * License: GNU General Public License v2 or later
 				 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 				 */

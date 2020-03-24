@@ -4,13 +4,13 @@
  *  Plugin URI: http://wordpress.org/plugins/subtitles/
  * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
  *      Author: <a href="https://philip.blog/">Philip Arthur Moore</a>, <a href="https://wecobble.com">We Cobble</a>
- *     Version: 3.0.0
+ *     Version: 4.0.0
  * Text Domain: subtitles
  * Domain Path: /languages/
  *     License: GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Subtitles WordPress Plugin, Copyright 2014-2017 We Cobble <mail@wecobble.com>,
+ * Subtitles WordPress Plugin, Copyright 2014-2019 We Cobble <mail@wecobble.com>,
  * distributed under the terms of the GNU General Public License v2 or later.
  *
  * Right now WordPress currently presents no easy way for web publishers to add
@@ -86,7 +86,7 @@
  * @author    We Cobble <mail@wecobble.com>
  * @license   URI: http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License v2 or later
  * @link      http://wordpress.org/plugins/subtitles/
- * @copyright 2014-2017 We Cobble
+ * @copyright 2014-2018 We Cobble
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

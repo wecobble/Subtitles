@@ -1,6 +1,6 @@
 # Subtitles WordPress Plugin
 
-![Travis CI Build Status](https://travis-ci.org/wecobble/Subtitles.svg?branch=master) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Maintainability](https://api.codeclimate.com/v1/badges/0a1f6c571a369ebce00b/maintainability)](https://codeclimate.com/github/wecobble/Subtitles/maintainability)
+[![Gitter](https://badges.gitter.im/wecobble/Subtitles.svg)](https://gitter.im/wecobble/Subtitles?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) ![Travis CI Build Status](https://travis-ci.org/wecobble/Subtitles.svg?branch=master) [![Maintainability](https://api.codeclimate.com/v1/badges/0a1f6c571a369ebce00b/maintainability)](https://codeclimate.com/github/wecobble/Subtitles/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/0a1f6c571a369ebce00b/test_coverage)](https://codeclimate.com/github/wecobble/Subtitles/test_coverage)
 
 ![Subtitles in action](https://i.cloudup.com/YoFzxUCM2S.png)
 
@@ -10,7 +10,7 @@ Right now WordPress currently presents no easy way for web publishers to add sub
 
 Simply download _Subtitles_, activate it, and begin adding subtitles into your posts and pages today. For more advanced usage of the plugin, please see the [Frequently Asked Questions](https://github.com/wecobble/Subtitles/blob/master/README.md#frequently-asked-questions).
 
-If you like _Subtitles_, [thank me with coffee](https://www.paypal.me/wecobble) :coffee:. If you find it buggy, [tell me on GitHub](https://github.com/wecobble/Subtitles/issues) :beetle:. And if you have a cool example of how you're using _Subtitles_ on your website, let me know on [Twitter](https://twitter.com/philip_arthur) :bird:.
+If you like _Subtitles_, [thank us with coffee](https://www.paypal.me/wecobble) :coffee:. If you find it buggy, [tell us on GitHub](https://github.com/wecobble/Subtitles/issues) :beetle:. And if you have a cool example of how you're using _Subtitles_ on your website, let us know on [Twitter](https://twitter.com/wecobblellc) :bird:.
 
 ## Installation
 
@@ -66,7 +66,7 @@ When you uninstall _Subtitles_, nothing will happen to your subtitles post meta.
 
 ### _Subtitles_ Doesn't Work! ###
 
-There are two primary issues that may cause users to think that _Subtitles_ doesn't work: 1) no subtitles show on the site or 2) weird HTML begins to appear around titles on a site. I will address both of those here.
+There are two primary issues that may cause users to think that _Subtitles_ doesn't work: 1) no subtitles show on the site or 2) weird HTML begins to appear around titles on a site. We will address both of those here.
 
 #### Subtitles Don't Show Up On My Site!
 
@@ -86,12 +86,12 @@ Please see [these long threads](https://github.com/wecobble/Subtitles/issues?q=t
 
 ### SEO ###
 
-Will _Subtitles_ ruin your SEO? That's a fair question. The answer is no. I've made a note of exactly why `<spans>` are the default wrappers for subtitles in the [inline developer docs](https://github.com/wecobble/Subtitles/blob/master/subtitles.php) for the plugin, which I'll reiterate here:
+Will _Subtitles_ ruin your SEO? That's a fair question. The answer is no. We've made a note of exactly why `<spans>` are the default wrappers for subtitles in the [inline developer docs](https://github.com/wecobble/Subtitles/blob/master/subtitles.php) for the plugin, which I'll reiterate here:
 
 ```php
- * 4. Visually, I have made a major assumption that subtitles belong immediately after titles. The very
+ * 4. Visually, we have made a major assumption that subtitles belong immediately after titles. The very
  *    definition of a subtitle is that it is a subordinate title of a published work that often gives
- *    explanatory details about the immediately preceeding title. It's for this reason that I've chosen
+ *    explanatory details about the immediately preceeding title. It's for this reason that we've chosen
  *    to filter the output of the_title() with the expectation that post titles will be wrapped in
  *    primary heading (h1) tags. So post titles will be H1, while their subtitles will be spans.
  *    Multiple H1 tags in the HTML5 age are okay.
@@ -339,6 +339,10 @@ Proceed with caution here. In some cases getting too cavalier with this may intr
 
 All versions of _Subtitles_ can be found on the [Releases](https://github.com/wecobble/Subtitles/releases) page.
 
+### [v4.0.0] (TBD)
+
+- TBD
+
 ### [v3.0.0](https://github.com/wecobble/Subtitles/releases/tag/v3.0.0) (August 8th, 2017)
 
 - **Version Bump:** Fix all WordPress Coding Standards errors and update Tested Up To version.
@@ -440,7 +444,7 @@ See the [languages](https://github.com/wecobble/Subtitles/tree/master/languages)
 
 ## Versioning
 
-I've done my best to adhere to [Semantic Versioning](http://semver.org) for _Subtitles_.
+We've done our best to adhere to [Semantic Versioning](http://semver.org) for _Subtitles_.
 
 Given a version number MAJOR.MINOR.PATCH, increment the:
 
